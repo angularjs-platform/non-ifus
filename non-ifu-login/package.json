@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "description": "Login IFU for NoN",
   "main": "src/login.module.ts",
-  "typings": "src/login.model.ts",
   "peerDependencies": {
     "angular": "1.5.5",
     "@norn/non-framework": "0.1.0"

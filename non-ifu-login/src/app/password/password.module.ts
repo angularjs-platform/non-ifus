@@ -1,7 +1,5 @@
 const moduleName: string = 'non.ifu.login.functions.password';
 
-import * as angular from 'angular';
-
 // Bundle - config
 import {UiRouterConfig} from './password.routes';
 
