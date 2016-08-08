@@ -1,4 +1,4 @@
-const moduleName: string = 'non.ifu.organization.core.services';
+const moduleName: string = 'non.ifu.organization.app.shared.services';
 
 // Services
 import {CustomerManagementService} from './customer-management.service';

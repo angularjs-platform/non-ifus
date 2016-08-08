@@ -1,0 +1,16 @@
+{
+  "name": "@norn/non-ifu-home",
+  "version": "0.1.0",
+  "description": "Home Page",
+  "main": "src/home.module.ts",
+  "scripts" : {
+      "install-typings": "typings install"
+  },
+  "peerDependencies": {
+    "angular": "1.5.7",
+    "@norn/non-framework": "0.1.0"
+  },
+  "devDependencies": {
+    "typings": "0.7.12"
+  }
+}

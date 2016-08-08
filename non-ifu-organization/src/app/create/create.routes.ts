@@ -9,13 +9,17 @@ export class UiRouterConfig {
 
         $stateProvider
             .state('app.customerCreate', {
-                template: require('./create.tpl'),
-                controller: 'CreateCustomerController',
-                controllerAs: 'createCtrl',
                 url: '/customer/create',
                 resolve: {
                     countryData: this.getCountries,
                     currencyData: this.getCurrencies
+                },
+                views   : {
+                    'content@app': {
+                        template: require('./create.tpl'),
+                        controller: 'CreateCustomerController',
+                        controllerAs: 'createCtrl'
+                    }
                 }
             });
     }
