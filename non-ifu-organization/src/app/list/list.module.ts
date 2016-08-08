@@ -1,6 +1,4 @@
-const moduleName: string = 'non.ifu.customermgmt.functions.list';
-
-import * as angular from 'angular';
+const moduleName: string = 'non.ifu.organization.app.customermgmt.list';
 
 // Bundle - config
 import {UiRouterConfig} from './list.routes';

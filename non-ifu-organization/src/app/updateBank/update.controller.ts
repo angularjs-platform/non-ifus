@@ -1,18 +1,6 @@
 import {IBankManagementService} from '../create/create.service';
 
-export interface IUpdateBankController {
-    bank: any;
-
-    statuses: any;
-
-    countryData: any;
-
-    currencyData: any;
-
-    update(bank: any): void;
-}
-
-export class UpdateBankController implements IUpdateBankController {
+export class UpdateBankController {
 
     public bank: any;
 

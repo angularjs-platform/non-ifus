@@ -1,13 +1,6 @@
 import {IAuthenticationService} from '@norn/non-framework';
 
-export interface IPasswordController {
-    orgName: string;
-    userName: string;
-    password: string;
-    login(orgName: string, userName: string, password: string): void;
-}
-
-export class PasswordController implements IPasswordController {
+export class PasswordController {
 
     public orgName: string;
     public userName: string;
@@ -16,7 +9,7 @@ export class PasswordController implements IPasswordController {
     constructor(
         private AuthenticationService: IAuthenticationService,
         private $state: ng.ui.IStateService,
-        private $mdToast:  angular.material.IToastService) {
+        private $mdToast:  ng.material.IToastService) {
         'ngInject';
 
         this.orgName = null;
@@ -36,7 +29,7 @@ export class PasswordController implements IPasswordController {
             .textContent('Successfully loged in!')
             .position('top right'));
 
-        this.$state.go('app.customerCreate');
+        this.$state.go('app.home');
     };
 
     private handleErrorLogin = (): void => {

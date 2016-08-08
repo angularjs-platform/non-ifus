@@ -7,10 +7,14 @@ export class UiRouterConfig {
 
         $stateProvider
             .state('app.bankList', {
-                template: require('./list.tpl'),
-                controller: 'ListBankController',
-                controllerAs: 'listCtrl',
-                url: '/bank/list'
+                url: '/bank/list',
+                views: {
+                    'content@app': {
+                        template: require('./list.tpl'),
+                        controller: 'ListBankController',
+                        controllerAs: 'listCtrl'
+                    }
+                }
             });
     }
 }

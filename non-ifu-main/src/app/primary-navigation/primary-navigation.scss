@@ -1,0 +1,18 @@
+@import 'toolbar/toolbar';
+@import 'quickpanel/quickpanel';
+
+.non-primary-layout-container {
+    md-backdrop.md-opaque {
+        opacity: 0;
+        background-color: #FFF;
+        transition: none;
+    }
+
+    md-sidenav {
+        margin-top: 65px;
+    }
+
+    .md-menu-toolbar {
+        min-height: auto;
+    }
+}

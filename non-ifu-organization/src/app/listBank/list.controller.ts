@@ -1,11 +1,6 @@
 import {IBankManagementService} from '../create/create.service';
 
-export interface IListBankController {
-    bankList: Array<Object>;
-    edit(bank: Number): void;
-}
-
-export class ListBankController implements IListBankController {
+export class ListBankController {
 
     public bankList: Array<Object>;
 

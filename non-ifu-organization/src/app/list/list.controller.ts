@@ -1,11 +1,6 @@
 import {ICustomerManagementService} from '../../core/core.model';
 
-export interface IListCustomerController {
-    customerList: Array<Object>;
-    edit(customer: Number): void;
-}
-
-export class ListCustomerController implements IListCustomerController {
+export class ListCustomerController {
 
     public customerList: Array<Object>;
 

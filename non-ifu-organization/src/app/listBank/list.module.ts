@@ -1,6 +1,4 @@
-const moduleName: string = 'non.ifu.bankmgmt.functions.list';
-
-import * as angular from 'angular';
+const moduleName: string = 'non.ifu.organization.app.bankmgmt.list';
 
 // Bundle - config
 import {UiRouterConfig} from './list.routes';
