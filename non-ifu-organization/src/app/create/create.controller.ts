@@ -1,18 +1,6 @@
 import {IOrganizationManagementService, IReferenceDataService} from '../shared/shared.model';
 
-export interface ICreateCustomerController {
-    customer: any;
-
-    statuses: any;
-
-    countryData: any;
-
-    currencyData: any;
-
-    save(customer: any): void;
-}
-
-export class CreateCustomerController implements ICreateCustomerController {
+export class CreateCustomerController {
 
     public customer: any;
 

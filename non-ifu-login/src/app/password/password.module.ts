@@ -1,4 +1,4 @@
-const moduleName: string = 'non.ifu.login.functions.password';
+const moduleName: string = 'non.ifu.login.app.password';
 
 // Bundle - config
 import {UiRouterConfig} from './password.routes';

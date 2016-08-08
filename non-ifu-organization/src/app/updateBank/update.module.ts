@@ -1,6 +1,4 @@
-const moduleName: string = 'non.ifu.bankmgmt.functions.update';
-
-import * as angular from 'angular';
+const moduleName: string = 'non.ifu.organization.app.bankmgmt.update';
 
 // Bundle - config
 import {UiRouterConfig} from './update.routes';

@@ -1,4 +1,4 @@
-const moduleName: string = 'non.ifu.organization.app.create';
+const moduleName: string = 'non.ifu.organization.app.customermgmt.create';
 
 // Bundle - config
 import {UiRouterConfig} from './create.routes';
