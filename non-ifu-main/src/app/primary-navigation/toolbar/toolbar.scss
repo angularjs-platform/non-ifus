@@ -1,8 +1,11 @@
+// TODO:G Move to a theme
+$primary-layout-toolbar-separator-bg-color: rgba(0, 0, 0, .12);
+
 .non-primary-tool-bar {
     .toolbar-separator {
         height: 64px;
         width: 1px;
-        background: rgba(0, 0, 0, 0.12);
+        background: $primary-layout-toolbar-separator-bg-color;
     }
 
     .md-icon-button {
@@ -18,10 +21,10 @@
     }
 
     md-menu-bar {
-        padding : 0;
+        padding: 0;
     }
 
     md-menu-bar md-menu.md-open > button.user-profile-icon {
-        background-color: transparent; 
+        background-color: transparent;
     }
 }
