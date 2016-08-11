@@ -1,4 +1,4 @@
-const moduleName: string = 'non.ifu.login.functions';
+const moduleName: string = 'non.ifu.login.app';
 
 import password from './password/password.module';
 

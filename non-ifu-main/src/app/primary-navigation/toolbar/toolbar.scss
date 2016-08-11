@@ -1,0 +1,27 @@
+.non-primary-tool-bar {
+    .toolbar-separator {
+        height: 64px;
+        width: 1px;
+        background: rgba(0, 0, 0, 0.12);
+    }
+
+    .md-icon-button {
+        height: 64px;
+        width: 64px;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .md-icon-button .icon {
+        height: 30px;
+        width: 30px;
+    }
+
+    md-menu-bar {
+        padding : 0;
+    }
+
+    md-menu-bar md-menu.md-open > button.user-profile-icon {
+        background-color: transparent; 
+    }
+}

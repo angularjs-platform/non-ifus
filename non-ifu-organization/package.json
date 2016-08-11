@@ -3,11 +3,9 @@
   "version": "0.1.0",
   "description": "Customer Management IFU for NoN",
   "main": "src/organization.module.ts",
-  "typings": "src/organization.model.ts",
   "scripts": {
       "install-typings": "typings install"
   },
-
   "peerDependencies": {
     "angular": "1.5.5",
     "@norn/non-framework": "0.1.0"

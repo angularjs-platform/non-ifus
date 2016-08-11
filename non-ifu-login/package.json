@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "description": "Login IFU for NoN",
   "main": "src/login.module.ts",
+  "scripts" : {
+      "install-typings": "typings install"
+  },
   "peerDependencies": {
-    "angular": "1.5.5",
+    "angular": "1.5.7",
     "@norn/non-framework": "0.1.0"
   },
   "devDependencies": {

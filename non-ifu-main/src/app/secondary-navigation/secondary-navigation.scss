@@ -1,0 +1,26 @@
+.non-secondary-layout-container {
+    .non-secondary-tool-bar {
+        margin-bottom: 5px;
+    }
+    
+    .secondary-content-container md-sidenav {
+        position: absolute;
+        top: 60px;
+        left: 15px;
+    }
+}
+
+.non-primary-layout-container-horizontal {
+    .secondary-content-container md-sidenav {
+        top: 100px;
+    }
+}
+
+.non-primary-layout-container-content-only {
+    .secondary-content-container md-sidenav {
+        margin-top: 45px;
+        top: 0px;
+        left: 0px;
+    }
+}
+

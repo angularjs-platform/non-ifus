@@ -1,18 +1,6 @@
 import {ICustomerManagementService} from '../../core/core.model';
 
-export interface IUpdateCustomerController {
-    customer: any;
-
-    statuses: any;
-
-    countryData: any;
-
-    currencyData: any;
-
-    update(customer: any): void;
-}
-
-export class UpdateCustomerController implements IUpdateCustomerController {
+export class UpdateCustomerController {
 
     public customer: any;
 

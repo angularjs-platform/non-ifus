@@ -7,12 +7,16 @@ export class UiRouterConfig {
 
         $stateProvider
             .state('app.customerUpdate', {
-                template: require('./update.tpl'),
-                controller: 'UpdateCustomerController',
-                controllerAs: 'updateCtrl',
                 url: '/customer/update',
                 params: {
                     orgId: null
+                },
+                views: {
+                    'content@app': {
+                        template: require('./update.tpl'),
+                        controller: 'UpdateCustomerController',
+                        controllerAs: 'updateCtrl'
+                    }
                 }
             });
     }
