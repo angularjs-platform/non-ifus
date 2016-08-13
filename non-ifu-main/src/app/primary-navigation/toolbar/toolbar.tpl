@@ -17,25 +17,29 @@
                     <md-menu-content width="3">
                         <md-menu-item class="md-indent" ui-sref="app.userprofile">
                             <md-icon md-svg-icon="account" class="icon"></md-icon>
-                            <md-button>My Profile</md-button>
+                            <md-button><span translate>MY_PROFILE</span></md-button>
                         </md-menu-item>
 
                         <md-menu-item class="md-indent">
                             <md-icon md-svg-icon="translate" class="icon"></md-icon>
                             <md-menu>
-                                <md-button ng-click="$mdOpenMenu()">Language</md-button>
+                                <md-button ng-click="$mdOpenMenu()"><span translate>LANGUAGE</span></md-button>
                                 <md-menu-content width="2">
                                     <md-menu-item>
-                                        <md-button>English</md-button>
+                                        <md-button ng-click="vm.changeLanguage('en')"
+                                            ng-class="{'md-accent' : vm.isSelected('en')}"><span translate>LANGUAGE_ENGLISH</span></md-button>
                                     </md-menu-item>
                                     <md-menu-item>
-                                        <md-button>French</md-button>
+                                        <md-button ng-click="vm.changeLanguage('fr')"
+                                            ng-class="{'md-accent' : vm.isSelected('fr')}"><span translate>LANGUAGE_FRENCH</span></md-button>
                                     </md-menu-item>
                                     <md-menu-item>
-                                        <md-button>German</md-button>
+                                        <md-button ng-click="vm.changeLanguage('de')"
+                                            ng-class="{'md-accent' : vm.isSelected('de')}"><span translate>LANGUAGE_GERMAN</span></md-button>
                                     </md-menu-item>
                                     <md-menu-item>
-                                        <md-button>Spanish</md-button>
+                                        <md-button ng-click="vm.changeLanguage('es')"
+                                            ng-class="{'md-accent' : vm.isSelected('es')}"><span translate>LANGUAGE_SPANISH</span></md-button>
                                     </md-menu-item>
                                 </md-menu-content>
                             </md-menu>
@@ -45,7 +49,7 @@
 
                         <md-menu-item class="md-indent" ui-sref="login">
                             <md-icon md-svg-icon="logout" class="icon"></md-icon>
-                            <md-button>Logout</md-button>
+                            <md-button><span translate>LOGOUT</span></md-button>
                         </md-menu-item>
                     </md-menu-content>
                 </md-menu>
