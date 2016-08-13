@@ -13,7 +13,8 @@ export class UiRouterConfig {
             .state('app', {
                 abstract: true,
                 resolve: {
-                    initialConfig: this.loadConfiguration
+                    initialConfig: this.loadConfiguration,
+                    loadLocalization: this.loadLocalization
                 },
                 views   : {
                     'main@': {
@@ -57,5 +58,12 @@ export class UiRouterConfig {
     private loadConfiguration = (ConfigurationService: IConfigurationService): any => {
         'ngInject';
         return ConfigurationService.loadConfig();
+    };
+
+    private loadLocalization = ($translatePartialLoader: ng.translate.ITranslatePartialLoaderService, $translate: ng.translate.ITranslateService): any => {
+        'ngInject';
+
+        $translatePartialLoader.addPart('all');
+        $translate.refresh();
     };
 }

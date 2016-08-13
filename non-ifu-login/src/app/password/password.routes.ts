@@ -8,6 +8,9 @@ export class UiRouterConfig {
         $stateProvider
             .state('login', {
                 url: '/login',
+                resolve: {
+                    loadLocalization: this.loadLocalization
+                },
                 views   : {
                     'main@': {
                         template: require('./password.tpl'),
@@ -17,4 +20,11 @@ export class UiRouterConfig {
                 }
             });
     }
+
+    private loadLocalization = ($translatePartialLoader: ng.translate.ITranslatePartialLoaderService, $translate: ng.translate.ITranslateService): any => {
+        'ngInject';
+
+        $translatePartialLoader.addPart('login');
+        $translate.refresh();
+    };
 }
