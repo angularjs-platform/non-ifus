@@ -60,15 +60,15 @@
 </md-sidenav>
 <md-fab-speed-dial md-direction="up" class="md-fling md-fab-bottom-right">
     <md-fab-trigger>
-        <md-button class="md-fab md-primary">
+        <md-button class="md-fab md-primary" aria-label="Page Action Button">
             <md-icon md-svg-icon="silverware" class="icon"></md-icon>
         </md-button>
     </md-fab-trigger>
     <md-fab-actions>
-        <md-button class="md-fab md-mini md-accent" ng-click="vm.togglePrimaryNavigationContent()">
+        <md-button class="md-fab md-mini md-accent" ng-click="vm.togglePrimaryNavigationContent()" aria-label="Maximize Minimize Button">
             <md-icon md-svg-icon="crop-free" class="icon"></md-icon>
         </md-button>
-        <md-button class="md-fab md-mini md-accent" ng-click="vm.scrollToTop()">
+        <md-button class="md-fab md-mini md-accent" ng-click="vm.scrollToTop()" aria-label="Scroll To Top Button">
             <md-icon md-svg-icon="chevron-double-up" class="icon"></md-icon>
         </md-button>
     </md-fab-actions>
