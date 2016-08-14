@@ -3,7 +3,7 @@
         <non-horizontal-navigation-bar  class="spread" menu-list="vm.menuList"></non-horizontal-navigation-bar>
     </div>
     <div layout="row" layout-align="end center" flex="5">
-        <md-button class="md-icon-button">
+        <md-button class="md-icon-button" aria-label="Secondary Actions Button">
             <md-icon md-svg-icon="settings" class="icon"></md-icon>
         </md-button>
     </div>
