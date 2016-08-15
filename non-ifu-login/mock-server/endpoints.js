@@ -3,7 +3,9 @@ function getLocalization(req, res, next) {
             ORGANIZATION: 'Organization',
             USERNAME: 'Username',
             PASSWORD: 'Password',
-            LOGIN: 'Login'
+            LOGIN: 'Login',
+            FIELD_REQUIRED: 'Field Is Required!',
+            FIELD_MAX_LENGTH_EXCEEDED: 'Field Maximum Length Exceeded!'
         });
 }
 

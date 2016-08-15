@@ -22,7 +22,9 @@ function getLocalization(req, res, next) {
             ACTIONS: 'Actions',
             EDIT: 'Edit',
             LISTOFCUSTOMERS: 'List Of Customers',
-            LISTOFBANKS: 'List of Banks'
+            LISTOFBANKS: 'List of Banks',
+            FIELD_REQUIRED: 'Field Is Required!',
+            FIELD_MAX_LENGTH_EXCEEDED: 'Field Maximum Length Exceeded!'
         });
 }
 

@@ -15,7 +15,7 @@ export class UiRouterConfig {
                     'main@': {
                         template: require('./password.tpl'),
                         controller: 'PasswordController',
-                        controllerAs: 'passwordCtrl'
+                        controllerAs: 'vm'
                     }
                 }
             });
