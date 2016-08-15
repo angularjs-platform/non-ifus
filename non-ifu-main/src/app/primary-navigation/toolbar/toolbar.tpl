@@ -2,7 +2,7 @@
     <div layout="row" layout-align="space-between center" flex>
         <div layout="row" layout-align="start center">
             <md-button class="md-icon-button"
-                ng-click="vm.toggleSideNav('primary-vertical-navigation')" ng-show="vm.verticalNavigationEnabled">
+                ng-click="vm.toggleSideNav('primary-vertical-navigation')" ng-show="vm.verticalNavigationEnabled" aria-label="Toggle Primary Menu Button">
                 <md-icon md-svg-icon="menu" class="icon"></md-icon>
             </md-button>
 
@@ -11,7 +11,7 @@
         <div layout="row" layout-align="end center">
             <md-menu-bar id="user-menu">
                 <md-menu md-position-mode="left bottom">
-                    <md-button class="md-icon-button user-profile-icon" ng-click="$mdOpenMenu()">
+                    <md-button class="md-icon-button user-profile-icon" ng-click="$mdOpenMenu()" aria-label="User Menu Button">
                         <md-icon md-svg-icon="account-circle" class="icon"></md-icon>
                     </md-button>
                     <md-menu-content width="3">
@@ -57,7 +57,7 @@
 
             <div class="toolbar-separator"></div>
 
-            <md-button class="md-icon-button" ng-click="vm.toggleSideNav('quick-panel')">
+            <md-button class="md-icon-button" ng-click="vm.toggleSideNav('quick-panel')" aria-label="Quick Panel Button">
                 <md-icon md-svg-icon="dots-vertical" class="icon"></md-icon>
             </md-button>
         </div>
