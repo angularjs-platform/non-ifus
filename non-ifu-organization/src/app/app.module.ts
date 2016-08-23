@@ -4,8 +4,9 @@ const moduleName: string = 'non.ifu.organization.app';
 import shared from './shared/shared.module';
 
 // pages
-import create from './create/create.module';
+import customer from './customer/customer.module';
+import bank from './bank/bank.module';
 
-angular.module(moduleName, [shared, create]);
+angular.module(moduleName, [shared, customer, bank]);
 
 export default moduleName;
