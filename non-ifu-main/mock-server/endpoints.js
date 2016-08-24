@@ -16,7 +16,13 @@ function getLocalization(req, res, next) {
             CONTENT_WITH_TOOLBAR: 'Content with Toolbar',
             CONTENT_ONLY: 'Content Only',
             SECONDARY_LAYOUT_STYLE: 'Secondary Layout Style',
-            RELOAD: 'Reload'
+            RELOAD: 'Reload',
+            ORGNAME: 'Organization Name',
+            BEI: 'BEI',
+            ACTIONS: 'Actions',
+            EDIT: 'Edit',
+            LISTOFCUSTOMERS: 'List Of Customers',
+            LISTOFBANKS: 'List of Banks'
         });
 }
 
