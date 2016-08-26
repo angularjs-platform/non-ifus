@@ -1,24 +1,29 @@
 import {IAuthenticationService} from '@norn/non-framework';
 
+const loginFields: any = require('./password.form.json');
+
 export class PasswordController {
 
-    public orgName: string;
-    public userName: string;
-    public password: string;
+    public login: any;
 
     constructor(
         private AuthenticationService: IAuthenticationService,
         private $state: ng.ui.IStateService,
-        private $mdToast:  ng.material.IToastService) {
+        private $mdToast:  ng.material.IToastService,
+        private $translate: ng.translate.ITranslateService) {
         'ngInject';
 
-        this.orgName = null;
-        this.userName = null;
-        this.password = null;
+        this.login = { data: {}, fields: loginFields };
     }
 
-    public login = (orgName: string, userName: string, password: string): void => {
-        this.AuthenticationService.login(orgName, userName, password).then(this.handleSuccessfulLogin, this.handleErrorLogin);
+    public submit = (valid: boolean): void => {
+        if (valid) {
+            this.AuthenticationService.login(this.login.data.orgName, this.login.data.userName,
+                        this.login.data.password).then(this.handleSuccessfulLogin, this.handleErrorLogin);
+        }
+        else {
+            this.$mdToast.show(this.$mdToast.simple().textContent('Unable to login. Please correct your inputs!').position('top right'));
+        }
     };
 
     private handleSuccessfulLogin = (response: any): void  => {
@@ -27,15 +32,13 @@ export class PasswordController {
         this.$mdToast.show(
             this.$mdToast.simple()
             .textContent('Successfully loged in!')
-            .position('top right'));
+            .position('bottom left'));
 
         this.$state.go('app.home');
     };
 
     private handleErrorLogin = (): void => {
         this.$mdToast.show(this.$mdToast.simple().textContent('Unable to login. Please try again!'));
-        this.orgName = null;
-        this.userName = null;
-        this.password = null;
+        this.login.data = {};
     };
 }
