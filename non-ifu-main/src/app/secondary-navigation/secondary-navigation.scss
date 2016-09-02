@@ -10,6 +10,10 @@
     }
 }
 
+.non-secondary-layout-container-horizontal md-toolbar {
+    width: auto;
+}
+
 .non-primary-layout-container-horizontal {
     .secondary-content-container md-sidenav {
         top: 100px;
@@ -18,9 +22,9 @@
 
 .non-primary-layout-container-content-only {
     .secondary-content-container md-sidenav {
-        margin-top: 45px;
+        margin-top: 59px;
         top: 0px;
-        left: 0px;
+        left: 16px;
     }
 }
 

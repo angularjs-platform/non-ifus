@@ -1,4 +1,4 @@
-<md-toolbar class="md-menu-toolbar md-whiteframe-2dp" layout="row" layout-align="start center" flex>
+<md-toolbar class="md-menu-toolbar md-whiteframe-2dp" layout="row" layout-align="start center">
     <div layout="row" layout-align="center center" flex="95">
         <non-horizontal-navigation-bar  class="spread" menu-list="vm.menuList"></non-horizontal-navigation-bar>
     </div>
