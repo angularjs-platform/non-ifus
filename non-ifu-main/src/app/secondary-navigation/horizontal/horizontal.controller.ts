@@ -1,9 +1,17 @@
+import {IMenuService} from '@norn/non-framework';
+
 export class SecondaryHorizontalController {
 
-    public menuList: any;
+    public menuList: any = {};
 
-    constructor() {
+    constructor(private $rootScope: ng.IRootScopeService,
+                private MenuService: IMenuService) {
+        'ngInject';
 
-        this.menuList = {};
+        this.menuList = this.MenuService.getSecondaryMenuList();
+
+        this.$rootScope.$on('$stateChangeStart', (event: any, toState: any, toParams: any, fromState: any, fromParams: any): any => {
+            this.menuList = this.MenuService.getSecondaryMenuList();
+        });
     }
 }

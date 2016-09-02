@@ -1,0 +1,277 @@
+[
+     {
+        "elementAttributes": {
+          "layout-gt-sm": "row",
+          "layout-sm": "row",
+          "layout-xs": "column"
+        },
+        "fieldGroup": [
+            {
+                "key": "orgName",
+                "type": "input",
+                "className": "flex-gt-sm-70 flex-sm-50 flex-xs",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "BANK_ABBV_NAME",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'BANK_ABBV_NAME'|translate"
+                }
+            },
+            {
+                "key": "name",
+                "type": "input",
+                "className": "flex-gt-sm-30 flex-sm-50 flex-xs",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "BANK_NAME",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'BANK_NAME'|translate"
+                }
+            }
+        ]
+    },
+    {
+        "elementAttributes": {
+          "layout-gt-sm": "row",
+          "layout-sm": "column",
+          "layout-xs": "column"
+        },
+        "fieldGroup": [
+            {
+                "key": "addressLine1",
+                "type": "input",
+                "className": "flex-gt-sm-40",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "ADDRESS_1",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'ADDRESS_1'|translate"
+                }
+            },
+            {
+                "key": "addressLine2",
+                "type": "input",
+                "className": "flex-80 flex-gt-sm-40 flex-xs-100",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "ADDRESS_2",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'ADDRESS_2'|translate"
+                }
+            },
+            {
+                "key": "dom",
+                "type": "input",
+                "className": "flex-gt-sm-20",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "DOM",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'DOM'|translate"
+                }
+            }
+        ]
+    },
+    {
+        "key": "baseCurCode",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "BASE_CURRENCY",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'BASE_CURRENCY'|translate"
+        }
+    },
+    {
+        "key": "contactName",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "CONTACT_NAME",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'CONTACT_NAME'|translate"
+        }
+    },
+    {
+        "key": "country",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "COUNTRY",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'COUNTRY'|translate"
+        }
+    },
+    {
+        "key": "email",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "EMAIL",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'EMAIL'|translate"
+        }
+    },
+    {
+        "key": "fax",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "FAX",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'FAX'|translate"
+        }
+    },
+    {
+        "key": "language",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "LANGUAGE",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'LANGUAGE'|translate"
+        }
+    },
+    {
+        "key": "phone",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "PHONE",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'PHONE'|translate"
+        }
+    },
+    {
+        "key": "reference",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "REFERENCE",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'REFERENCE'|translate"
+        }
+    },
+    {
+        "key": "telex",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "TELEX",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'TELEX'|translate"
+        }
+    },
+    {
+        "key": "webAddress",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "WEB_ADDRESS",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'WEB_ADDRESS'|translate"
+        }
+    },
+    {
+        "key": "streetName",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "STREET_NAME",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'STREET_NAME'|translate"
+        }
+    },
+    {
+        "key": "postCode",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "POSTAL_CODE",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'POSTAL_CODE'|translate"
+        }
+    },
+    {
+        "key": "townName",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "TOWN_NAME",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'TOWN_NAME'|translate"
+        }
+    },
+    {
+        "key": "countrySubDiv",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "COUNTRY_SUB_DIVISION",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'COUNTRY_SUB_DIVISION'|translate"
+        }
+    },
+    {
+        "key": "status",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "STATUS",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'STATUS'|translate"
+        }
+    },
+    {
+        "key": "bankVO.isoCode",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "ISO_CODE",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'ISO_CODE'|translate"
+        }
+    }
+]

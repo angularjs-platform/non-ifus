@@ -10,6 +10,11 @@
         },
         "expressionProperties": {
             "templateOptions.label": "'ORGANIZATION' | translate"
+        },
+        "validation": {
+          "messages": {
+            "md-maxlength": "'FIELD_MAX_LENGTH_EXCEEDED_VARIABLE' | translate: { value: $viewValue, maxlength: this.to.maxlength }"
+          }
         }
     },
     {
@@ -18,8 +23,7 @@
         "templateOptions": {
             "type": "text",
             "label": "USERNAME",
-            "required": true,
-            "maxlength": 50
+            "required": true
         },
         "expressionProperties": {
             "templateOptions.label": "'USERNAME'|translate"
