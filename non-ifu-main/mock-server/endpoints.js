@@ -24,7 +24,10 @@ function getLocalization(req, res, next) {
             LISTOFCUSTOMERS: 'List Of Customers',
             LISTOFBANKS: 'List of Banks',
             FIELD_REQUIRED: 'Field Is Required!',
-            FIELD_MAX_LENGTH_EXCEEDED: 'Field Maximum Length Exceeded!'
+            FIELD_MAX_LENGTH_EXCEEDED: 'Field Maximum Length Exceeded!',
+            THEME: 'Theme',
+            DEFAULT: 'Default',
+            CUSTOM: 'Custom'
         });
 }
 
