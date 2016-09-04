@@ -48,6 +48,18 @@
                                     </md-radio-group>
                                 </div>
                             </div>
+                            <md-divider></md-divider>
+                            <div layout="column" class="md-caption">
+                                <div>
+                                    <div class="md-body-2" translate>THEME</div>
+                                    <br/>
+                                    <md-radio-group layout="column" ng-model="vm.theme"
+                                        ng-change="vm.updateTheme()">
+                                        <md-radio-button value="base"><span translate>DEFAULT</span></md-radio-button>
+                                        <md-radio-button value="custom"><span translate>CUSTOM</span></md-radio-button>
+                                    </md-radio-group>
+                                </div>
+                            </div>
                             <div layout="row" layout-align="start center">
                                 <md-button class="md-raised md-primary" ng-click="vm.reload()"><span translate>RELOAD</span></md-button>
                             </div>
