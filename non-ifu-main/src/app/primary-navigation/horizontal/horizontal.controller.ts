@@ -1,18 +1,12 @@
-import {IConfigurationService, Configuration} from '@norn/non-framework';
+import {IMenuService} from '@norn/non-framework';
 
 export class PrimaryHorizontalController {
 
     public menuList: any = {};
 
-    constructor(private ConfigurationService: IConfigurationService) {
+    constructor(private MenuService: IMenuService) {
         'ngInject';
 
-        const config: Configuration =  this.ConfigurationService.getConfig();
-
-        if (config.primaryMenuList) {
-            config.primaryMenuList.forEach((menu: any): void => {
-               this.menuList[menu.id] = menu.menuList;
-           });
-        }
+        this.menuList =  this.MenuService.getPrimaryMenuList();
     }
 }

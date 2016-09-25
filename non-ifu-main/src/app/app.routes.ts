@@ -1,4 +1,4 @@
-import {IConfigurationService, ILayoutProvider} from '@norn/non-framework';
+import {IConfigurationService, Configuration, ILayoutProvider, IMenuService} from '@norn/non-framework';
 
 export class UiRouterConfig {
 
@@ -55,9 +55,12 @@ export class UiRouterConfig {
         });
     }
 
-    private loadConfiguration = (ConfigurationService: IConfigurationService): any => {
+    private loadConfiguration = (ConfigurationService: IConfigurationService, MenuService: IMenuService): any => {
         'ngInject';
-        return ConfigurationService.loadConfig();
+
+        return ConfigurationService.loadConfig().then((config: Configuration): void => {
+            MenuService.setPrimaryMenuList(config.primaryMenuList);
+        });
     };
 
     private loadLocalization = ($translatePartialLoader: ng.translate.ITranslatePartialLoaderService, $translate: ng.translate.ITranslateService): any => {
