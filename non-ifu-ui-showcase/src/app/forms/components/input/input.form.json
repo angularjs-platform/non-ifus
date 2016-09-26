@@ -1,0 +1,106 @@
+[
+    {
+        "key": "textField1",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "Text Field"
+        }
+    },
+    {
+        "key": "textField2",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "Text Field with Translation"
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'FIELD_WITH_TRANSLATION' | translate"
+        }
+    },
+    {
+        "key": "textField3",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "Text Field Mandatory",
+            "required": true
+        }
+    },
+    {
+        "key": "textField4",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "Text Field MinLength(2) and Maxlength(5)",
+            "minlength": 2,
+            "maxlength": 5
+        }
+    },
+    {
+        "key": "textField5",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "Text Field Custom Error Message With Translation Place holders",
+            "maxlength": 5
+        },
+        "validation": {
+          "messages": {
+            "md-maxlength": "'FIELD_MAX_LENGTH_EXCEEDED_VARIABLE' | translate: { value: $viewValue, maxlength: this.to.maxlength }"
+          }
+        }
+    },
+    {
+        "key": "textField6",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "Text Field Disabled",
+            "disabled": true
+        }
+    },
+    {
+        "key": "textField7",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "Text Field ReadOnly",
+            "readonly": true
+        }
+    },
+    {
+        "key": "numberField1",
+        "type": "input",
+        "templateOptions": {
+            "type": "number",
+            "label": "Number Field"
+        }
+    },
+    {
+        "key": "numberField2",
+        "type": "input",
+        "templateOptions": {
+            "type": "number",
+            "label": "Number Field Min(2) and Max (15)",
+            "min": 2,
+            "max": 15
+        }
+    },
+    {
+        "key": "emailField1",
+        "type": "input",
+        "templateOptions": {
+            "type": "email",
+            "label": "Email Field"
+        }
+    },
+    {
+        "key": "urlField1",
+        "type": "input",
+        "templateOptions": {
+            "type": "url",
+            "label": "URL Field"
+        }
+    }
+]

@@ -1,0 +1,36 @@
+[
+    {
+        "key": "switchField1",
+        "type": "switch",
+        "templateOptions": {
+            "label": "Switch Field"
+        }
+    },
+    {
+        "key": "switchField2",
+        "type": "switch",
+        "templateOptions": {
+            "label": "Switch Field Disabled",
+            "disabled": true
+        }
+    },
+    {
+        "key": "switchField3",
+        "type": "switch",
+        "templateOptions": {
+            "label": "Switch Field translated"
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'FIELD_WITH_TRANSLATION' | translate"
+        }
+    },
+    {
+        "key": "switchField4",
+        "type": "switch",
+        "templateOptions": {
+            "label": "Switch Field with Truth and False values",
+            "trueValue": "'Yup'",
+            "falseValue": "'Nope'"
+        }
+    }
+]

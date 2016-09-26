@@ -1,6 +1,6 @@
-const componentFields: any = require('./components.form.json');
+const componentFields: any = require('./radiobutton.form.json');
 
-export class ComponentsController {
+export class RadiobuttonComponentsController {
 
     public components: any;
 

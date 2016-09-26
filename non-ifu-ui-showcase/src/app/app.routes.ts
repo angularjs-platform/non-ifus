@@ -25,12 +25,56 @@ export class UiRouterConfig {
                     'menuList': [{
                             'id': 'menu-forms-components',
                             'title': 'Form Components Demo',
-                            'url': '#/ui-showcase/forms/components'
+                            'ref': 'menu-forms-components-ref'
                         },
                         {
                             'id': 'menu-forms-dynamic-validations',
                             'title': 'Form Dynamic Validations Demo',
                             'url': '#/ui-showcase/forms/validations'
+                        },
+                        {
+                            'id': 'menu-forms-layouts',
+                            'title': 'Form Layouts Demo',
+                            'url': '#/ui-showcase/forms/layouts'
+                        }
+                    ]
+                },
+                {
+                    'id': 'menu-forms-components-ref',
+                    'menuList': [{
+                            'id': 'menu-forms-components-input',
+                            'title': 'Input',
+                            'url': '#/ui-showcase/forms/components/input'
+                        },
+                        {
+                            'id': 'menu-forms-components-radio',
+                            'title': 'Radio Button',
+                            'url': '#/ui-showcase/forms/components/radiobutton'
+                        },
+                        {
+                            'id': 'menu-forms-components-checkbox',
+                            'title': 'Checkbox',
+                            'url': '#/ui-showcase/forms/components/checkbox'
+                        },
+                        {
+                            'id': 'menu-forms-components-text-area',
+                            'title': 'Textarea',
+                            'url': '#/ui-showcase/forms/components/textarea'
+                        },
+                        {
+                            'id': 'menu-forms-components-select',
+                            'title': 'Select Dropdown',
+                            'url': '#/ui-showcase/forms/components/select'
+                        },
+                        {
+                            'id': 'menu-forms-components-datepicker',
+                            'title': 'Date Picker',
+                            'url': '#/ui-showcase/forms/components/datepicker'
+                        },
+                        {
+                            'id': 'menu-forms-components-switch',
+                            'title': 'Switch',
+                            'url': '#/ui-showcase/forms/components/switch'
                         }
                     ]
                 }

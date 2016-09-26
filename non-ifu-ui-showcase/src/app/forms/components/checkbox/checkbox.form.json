@@ -1,0 +1,36 @@
+[
+    {
+        "key": "checboxkField1",
+        "type": "checkbox",
+        "templateOptions": {
+            "label": "CheckBox Field"
+        }
+    },
+    {
+        "key": "checboxkField2",
+        "type": "checkbox",
+        "templateOptions": {
+            "label": "CheckBox Field Disabled",
+            "disabled": true
+        }
+    },
+    {
+        "key": "checboxkField3",
+        "type": "checkbox",
+        "templateOptions": {
+            "label": "CheckBox Field translated"
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'FIELD_WITH_TRANSLATION' | translate"
+        }
+    },
+    {
+        "key": "checboxkField4",
+        "type": "checkbox",
+        "templateOptions": {
+            "label": "CheckBox Field with Truth and False values",
+            "trueValue": "'Yup'",
+            "falseValue": "'Nope'"
+        }
+    }
+]
