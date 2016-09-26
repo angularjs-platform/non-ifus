@@ -1,0 +1,85 @@
+[
+     {
+        "elementAttributes": {
+          "layout-gt-sm": "row",
+          "layout-sm": "row",
+          "layout-xs": "column"
+        },
+        "fieldGroup": [
+            {
+                "key": "orgName",
+                "type": "input",
+                "className": "flex flex-gt-sm-70 flex-sm-50",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "BANK_ABBV_NAME",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'BANK_ABBV_NAME'|translate"
+                }
+            },
+            {
+                "key": "name",
+                "type": "input",
+                "className": "flex-gt-sm-30 flex-sm-50 flex-xs",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "BANK_NAME",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'BANK_NAME'|translate"
+                }
+            }
+        ]
+    },
+    {
+        "elementAttributes": {
+          "layout-gt-sm": "row",
+          "layout-sm": "column",
+          "layout-xs": "column"
+        },
+        "fieldGroup": [
+            {
+                "key": "addressLine1",
+                "type": "input",
+                "className": "flex flex-gt-sm-40",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "ADDRESS_1",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'ADDRESS_1'|translate"
+                }
+            },
+            {
+                "key": "addressLine2",
+                "type": "input",
+                "className": "flex-80 flex-gt-sm-40 flex-xs-100",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "ADDRESS_2",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'ADDRESS_2'|translate"
+                }
+            },
+            {
+                "key": "dom",
+                "type": "input",
+                "className": "flex flex-gt-sm-20",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "DOM",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'DOM'|translate"
+                }
+            }
+        ]
+    }
+]
