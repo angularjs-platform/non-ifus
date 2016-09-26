@@ -1,0 +1,9 @@
+[
+    {
+        "key": "dateField1",
+        "type": "datepicker",
+        "templateOptions": {
+            "label": "Date Field"
+        }
+    }
+]
