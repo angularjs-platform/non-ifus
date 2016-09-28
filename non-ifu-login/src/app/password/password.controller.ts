@@ -5,15 +5,18 @@ const loginFields: any = require('./password.form.json');
 export class PasswordController {
 
     public login: any;
+    public showLoginBox: any;
 
     constructor(
         private AuthenticationService: IAuthenticationService,
         private $state: ng.ui.IStateService,
         private $mdToast:  ng.material.IToastService,
-        private $translate: ng.translate.ITranslateService) {
+        private $translate: ng.translate.ITranslateService,
+        private $timeout: ng.ITimeoutService) {
         'ngInject';
 
         this.login = { data: {}, fields: loginFields };
+        this.$timeout(this.showLoginContent, 200);
     }
 
     public submit = (valid: boolean): void => {
@@ -41,4 +44,8 @@ export class PasswordController {
         this.$mdToast.show(this.$mdToast.simple().textContent('Unable to login. Please try again!'));
         this.login.data = {};
     };
+
+    private showLoginContent = (): any => {
+        this.showLoginBox = true;
+    }
 }

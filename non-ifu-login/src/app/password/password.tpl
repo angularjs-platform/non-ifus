@@ -1,5 +1,5 @@
 <div layout="row" layout-align="center center" class="non-password-tpl" flex>
-    <md-whiteframe class="md-whiteframe-6dp" flex="30"  flex-xs="90" flex-sm="60" layout-padding>
+    <md-whiteframe ng-show="vm.showLoginBox" class="md-whiteframe-20dp fx-bounce-normal fx-dur-1500 fx-ease-quad" flex="30"  flex-xs="90" flex-sm="60" layout-padding>
         <form name="vm.loginForm" ng-submit="vm.submit(vm.loginForm.$valid)" non-accessible-form novalidate>
             <formly-form model="vm.login.data" fields="vm.login.fields" form="vm.loginForm">
                 <md-input-container>
