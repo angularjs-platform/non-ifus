@@ -1,7 +1,7 @@
 function getLocalization(req, res, next) {
     res.json({
-            ORGANIZATION: 'Organization',
-            USERNAME: 'Username',
+            ORGANIZATION_ID: 'Organization ID',
+            USER_ID: 'User ID',
             PASSWORD: 'Password',
             LOGIN: 'Login',
             FIELD_REQUIRED: 'Value Is Required!',
