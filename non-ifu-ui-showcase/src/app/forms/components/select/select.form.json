@@ -10,5 +10,44 @@
                 { "name": "Option 3", "value": "option3" }
             ]
         }
+    },
+    {
+        "key": "selectField2",
+        "type": "select",
+        "templateOptions": {
+            "label": "Select Field Disabled",
+            "disabled": true,
+            "options": [
+                { "name": "Option 1", "value": "option1" },
+                { "name": "Option 2", "value": "option2" },
+                { "name": "Option 3", "value": "option3" }
+            ]
+        }
+    },
+    {
+        "key": "selectField3",
+        "type": "select",
+        "templateOptions": {
+            "label": "Select Field Readonly",
+            "readonly": true,
+            "options": [
+                { "name": "Option 1", "value": "option1" },
+                { "name": "Option 2", "value": "option2" },
+                { "name": "Option 3", "value": "option3" }
+            ]
+        }
+    },
+    {
+        "key": "selectField4",
+        "type": "select",
+        "templateOptions": {
+            "label": "Select Field Mandatory",
+            "required": true,
+            "options": [
+                { "name": "Option 1", "value": "option1" },
+                { "name": "Option 2", "value": "option2" },
+                { "name": "Option 3", "value": "option3" }
+            ]
+        }
     }
 ]

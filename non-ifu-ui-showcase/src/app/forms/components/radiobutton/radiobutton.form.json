@@ -1,14 +1,51 @@
 [
     {
-        "key": "radiobuttonField1",
-        "type": "radiobutton",
-        "templateOptions": {
-            "label": "Radiobutton Field",
-            "options": [
-                { "name": "Option 1", "value": "option1" },
-                { "name": "Option 2", "value": "option2" },
-                { "name": "Option 3", "value": "option3" }
-            ]
-        }
+        "elementAttributes": {
+          "layout-gt-sm": "row",
+          "layout-sm": "row",
+          "layout-xs": "column"
+        },
+        "fieldGroup": [
+            {
+                "key": "radiobuttonField1",
+                "type": "radiobutton",
+                "className": "flex",
+                "templateOptions": {
+                    "label": "Radiobutton Field",
+                    "options": [
+                        { "name": "Option 1", "value": "option1" },
+                        { "name": "Option 2", "value": "option2" },
+                        { "name": "Option 3", "value": "option3" }
+                    ]
+                }
+            },
+            {
+                "key": "radiobuttonField2",
+                "type": "radiobutton",
+                "className": "flex",
+                "templateOptions": {
+                    "label": "Radiobutton Field All Disabled",
+                    "disabled": true,
+                    "options": [
+                        { "name": "Option 1", "value": "option1" },
+                        { "name": "Option 2", "value": "option2" },
+                        { "name": "Option 3", "value": "option3" }
+                    ]
+                }
+            },
+            {
+                "key": "radiobuttonField3",
+                "type": "radiobutton",
+                "className": "flex",
+                "templateOptions": {
+                    "label": "Radiobutton Field Few Disabled",
+                    "options": [
+                        { "name": "Option 1", "value": "option1" },
+                        { "name": "Option 2", "value": "option2", "disabled": true },
+                        { "name": "Option 3", "value": "option3" }
+                    ]
+                }
+            }
+        ]
     }
 ]
