@@ -20,6 +20,8 @@
     "BEI": "BEI",
     "ACTIONS": "Actions",
     "EDIT": "Edit",
+    "View": "View",
+    "Delete": "Delete",
     "LISTOFCUSTOMERS": "List Of Customers",
     "LISTOFBANKS": "List of Banks",
     "FIELD_REQUIRED": "Value Is Required!",

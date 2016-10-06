@@ -20,7 +20,7 @@ export class UiRouterConfig {
                 }
             })
             .state('app.bankView', {
-                url: '/bank/view',
+                url: '/bank/view/:orgId',
                 views: {
                     'content@app': {
                         template: require('./bank-cru.tpl'),
@@ -33,7 +33,7 @@ export class UiRouterConfig {
                 }
             })
             .state('app.bankUpdate', {
-                url: '/bank/update',
+                url: '/bank/update/:orgId',
                 views: {
                     'content@app': {
                         template: require('./bank-cru.tpl'),

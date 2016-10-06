@@ -2,13 +2,19 @@ export interface IOrganizationManagementService {
 
     orgType: string;
 
-    save(org: any): ng.IPromise<any>;
+    initiate(): ng.IPromise<any>;
 
-    list(): ng.IPromise<any>;
+    create(org: any): ng.IPromise<any>;
 
-    fetch(orgId: Number): ng.IPromise<any>;
+    edit(orgId: Number): ng.IPromise<any>;
+
+    view(orgId: Number): ng.IPromise<any>;
 
     update(org: any): ng.IPromise<any>;
+
+    delete(orgId: Number): ng.IPromise<any>;
+
+    list(): ng.IPromise<any>;
 }
 
 export interface IReferenceDataService {
