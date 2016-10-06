@@ -24,7 +24,7 @@
     "LISTOFBANKS": "List of Banks",
     "FIELD_REQUIRED": "Value Is Required!",
     "FIELD_MAX_LENGTH_EXCEEDED": "Maximum Length Exceeded!",
-    "FIELD_MAX_VALUE_NEEDED": "Maximum Value Exceeded!",
+    "FIELD_MAX_VALUE_EXCEEDED": "Maximum Value Exceeded!",
     "FIELD_NOT_EMAIL": "Invalid Email!",
     "FIELD_NOT_URL": "Invalid URL!",
     "FIELD_MIN_LENGTH_NEEDED": "Minimum Length Not Reached!",

@@ -1,0 +1,9 @@
+[
+    {
+        "key": "textareaField1",
+        "type": "textarea",
+        "templateOptions": {
+            "label": "Text Area Field"
+        }
+    }
+]
