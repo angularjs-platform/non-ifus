@@ -1,3 +1,9 @@
+function sendSuccess(req, res, next) {
+    res.json({
+        'success': 'true'
+    });
+}
+
 function getCountries(req, res, next) {
     res.json([{
         'countryVO': {
@@ -281,29 +287,91 @@ function getCustomers(req, res, next) {
 
 function getBanks(req, res, next) {
     res.json({
-        columnDefs: [
+        "title" : "LISTOFCUSTOMERS",
+        "columnDefs" : [
             {
-                "name": "orgVO.orgName",
-                "labelKey": "ORGNAME"
+                "name" : "orgName",
+                "labelKey" : "ORGNAME",
+                "visible" : true,
+                "type" : null,
+                "options" : null
             },
             {
-                "name": "orgVO.customerVO.bei",
-                "labelKey": "BEI"
+                "name" : "name",
+                "labelKey" : "NAME",
+                "visible" : true,
+                "type" : null,
+                "options" : null
             },
             {
-                "name": 'Actions',
-                "labelKey": "ACTIONS",
-                "type": "button",
-                "options": {
-                    "action": "edit",
-                    "buttonLabel": "EDIT"
-                }
+                "name" : "id",
+                "labelKey" : null,
+                "visible" : false,
+                "type" : null,
+                "options" : null
+            },
+            {
+                "name" : "Actions",
+                "labelKey" : "ACTIONS",
+                "visible" : true,
+                "type" : "button",
+                "options" :
+                [
+                    {
+                        "action" : "view",
+                        "buttonLabel" : "VIEW",
+                        "type" : "view"
+                    },
+                    {
+                        "action" : "edit",
+                        "buttonLabel" : "EDIT",
+                        "type" : "edit"
+                    },
+                    {
+                        "action" : "delete",
+                        "buttonLabel" : "DELETE",
+                        "type" : "delete"
+                    }
+                ]
             }
         ],
-        title: 'LISTOFBANKS',
-        data: [
-        {
-            "orgVO":{
+        "data" :
+        [
+            {
+                "orgName" : "GROUP",
+                "name" : "Name ",
+                "id" : 4
+            },
+            {
+                "orgName" : "TESTBANK",
+                "name" : "Test Bank",
+                "id" : 3050
+            },
+            {
+                "orgName" : "TESTBANK1",
+                "name" : "Test Bank1",
+                "id" : 3051
+            },
+            {
+                "orgName" : "TESTBANK2",
+                "name" : "Test Bank1",
+                "id" : 3052
+            }
+        ]
+    });
+}
+
+function initiateBank(req, res, next) {
+    res.json({
+        "orgVO": {
+            "orgType":"01"
+        }
+    });
+}
+
+function fetchBank(req, res, next) {
+    res.json({
+        "orgVO":{
                 "id":151,
                 "parentOrgId":1,
                 "bankGroupVO":null,
@@ -337,200 +405,8 @@ function getBanks(req, res, next) {
                 "townName":"sdsdfs",
                 "countrySubDiv":"sd",
                 "status":null,
-                "orgType":"03"
+                "orgType":"01"
             }
-        },
-        {
-            "orgVO":{
-                "id":1050,
-                "parentOrgId":1,
-                "bankGroupVO":null,
-                "bankVO":null,
-                "customerVO":{
-                    "id":1050,
-                    "bei":"uvi",
-                    "crmEmail":"iewi",
-                    "legalIdType":"ocm",
-                    "legalIdNo":"noca",
-                    "legalIdCountry":"osnc"
-                },
-                "branchVO":null,
-                "orgName":"TestRef",
-                "name":"sdhjhhj",
-                "addressLine1":"jhjj",
-                "addressLine2":"jjjj",
-                "baseCurCode":null,
-                "contactName":"kk",
-                "country":null,
-                "dom":"nnn",
-                "email":"kks",
-                "fax":"dsk",
-                "language":"kkd",
-                "phone":"kdks",
-                "reference":"ksdsk",
-                "telex":"kkddk",
-                "webAddress":"kkd",
-                "streetName":"skks",
-                "postCode":"kdxkkx",
-                "townName":"ksksk",
-                "countrySubDiv":"xkkx",
-                "status":"A",
-                "orgType":"03"
-            }
-        },
-        {
-            "orgVO":{
-                "id":1051,
-                "parentOrgId":1,
-                "bankGroupVO":null,
-                "bankVO":null,
-                "customerVO":{
-                    "id":1051,
-                    "bei":"uvi",
-                    "crmEmail":"iewi",
-                    "legalIdType":"ocm",
-                    "legalIdNo":"noca",
-                    "legalIdCountry":"osnc"
-                },
-                "branchVO":null,
-                "orgName":"TestRef1",
-                "name":"sdhjhhj",
-                "addressLine1":"jhjj",
-                "addressLine2":"jjjj",
-                "baseCurCode":null,
-                "contactName":"kk",
-                "country":null,
-                "dom":"nnn",
-                "email":"kks",
-                "fax":"dsk",
-                "language":"kkd",
-                "phone":"kdks",
-                "reference":"ksdsk",
-                "telex":"kkddk",
-                "webAddress":"kkd",
-                "streetName":"skks",
-                "postCode":"kdxkkx",
-                "townName":"ksksk",
-                "countrySubDiv":"xkkx",
-                "status":"A",
-                "orgType":"03"
-            }
-        },
-        {
-            "orgVO":{
-                "id":1100,
-                "parentOrgId":1,
-                "bankGroupVO":null,
-                "bankVO":null,
-                "customerVO":{
-                    "id":1100,
-                    "bei":"ss",
-                    "crmEmail":"fdv",
-                    "legalIdType":"sd",
-                    "legalIdNo":"scc",
-                    "legalIdCountry":"ssss"
-                },
-                "branchVO":null,
-                "orgName":"Test11",
-                "name":"jjjs",
-                "addressLine1":"kmsd",
-                "addressLine2":"mlkwwm",
-                "baseCurCode":null,
-                "contactName":"s",
-                "country":null,
-                "dom":"mlwlq",
-                "email":"dsj",
-                "fax":"sdju",
-                "language":"lm",
-                "phone":"m2m2m",
-                "reference":"l;ws",
-                "telex":"ms;",
-                "webAddress":"fndfjq",
-                "streetName":"ksks",
-                "postCode":"wkwk",
-                "townName":"kkkw",
-                "countrySubDiv":"kk",
-                "status":"A",
-                "orgType":"03"
-            }
-        },
-        {
-            "orgVO":{
-                "id":1150,
-                "parentOrgId":1,
-                "bankGroupVO":null,
-                "bankVO":null,
-                "customerVO":{
-                    "id":1150,
-                    "bei":"nseks",
-                    "crmEmail":"jsdc",
-                    "legalIdType":"cnks",
-                    "legalIdNo":"ldsmcl",
-                    "legalIdCountry":"w"
-                },
-                "branchVO":null,
-                "orgName":"Test124",
-                "name":"sb",
-                "addressLine1":"bjsc",
-                "addressLine2":"kjjb",
-                "baseCurCode":null,
-                "contactName":"dbckj",
-                "country":null,
-                "dom":"sbhc",
-                "email":"sdcn",
-                "fax":"aknnc",
-                "language":"jnskc",
-                "phone":"ksndcni",
-                "reference":"iwcn",
-                "telex":"ssifin",
-                "webAddress":"rirvn",
-                "streetName":"socnl",
-                "postCode":"pw",
-                "townName":"susic",
-                "countrySubDiv":"cnsi",
-                "status":"A",
-                "orgType":"03"
-            }
-        },
-        {
-            "orgVO":{
-                "id":1200,
-                "parentOrgId":1,
-                "bankGroupVO":null,
-                "bankVO":null,
-                "customerVO":{
-                    "id":1201,
-                    "bei":"dkk",
-                    "crmEmail":"sld",
-                    "legalIdType":"lklsd",
-                    "legalIdNo":"lsdlc",
-                    "legalIdCountry":"lml"
-                },
-                "branchVO":null,
-                "orgName":"test560",
-                "name":"dsdfkj",
-                "addressLine1":"ksjddncq",
-                "addressLine2":"nvdk",
-                "baseCurCode":null,
-                "contactName":"ssvvn",
-                "country":null,
-                "dom":"sndvk",
-                "email":"ddfnlk",
-                "fax":"lsdsnvl",
-                "language":"lnasaldcn",
-                "phone":"ln",
-                "reference":"lnl",
-                "telex":"lsdnc",
-                "webAddress":"nscl",
-                "streetName":"lmsldscms",
-                "postCode":"mlkmxx",
-                "townName":"kmlacm",
-                "countrySubDiv":"kmlk",
-                "status":"A",
-                "orgType":"03"
-            }
-        }
-        ]
     });
 }
 
@@ -555,6 +431,36 @@ var apiEndpoints = {
         method: 'GET',
         url: '/organization/bank/list',
         callback: getBanks
+    },
+    {
+        method: 'GET',
+        url: '/organization/bank/initiate',
+        callback: initiateBank
+    },
+    {
+        method: 'POST',
+        url: '/organization/bank/create',
+        callback: sendSuccess
+    },
+    {
+        method: 'GET',
+        url: '/organization/bank/edit/:id',
+        callback: fetchBank
+    },
+    {
+        method: 'GET',
+        url: '/organization/bank/view/:id',
+        callback: fetchBank
+    },
+    {
+        method: 'POST',
+        url: '/organization/bank/update',
+        callback: sendSuccess
+    },
+    {
+        method: 'POST',
+        url: '/organization/bank/delete',
+        callback: sendSuccess
     }]
 };
 
