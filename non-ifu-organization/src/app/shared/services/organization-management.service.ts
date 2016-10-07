@@ -9,9 +9,32 @@ export abstract class OrganizationManagementService implements IOrganizationMana
         'ngInject';
     }
 
-    public save = (org: any): ng.IPromise<any> => {
-        console.log(org);
-        return this.$http.post('/organization/' + this.orgType + '/create', {orgVO : org}).then(getCompleteHandler);
+    public initiate = (): ng.IPromise<any> => {
+        return this.$http.get('/organization/' + this.orgType + '/initiate').then(getCompleteHandler);
+
+        function getCompleteHandler(response: any): any {
+            return response.data;
+        }
+    };
+
+    public create = (org: any): ng.IPromise<any> => {
+        return this.$http.post('/organization/' + this.orgType + '/create', org).then(getCompleteHandler);
+
+        function getCompleteHandler(response: any): any {
+            return response.data;
+        }
+    };
+
+    public edit = (orgId: Number): ng.IPromise<any> => {
+        return this.$http.get('/organization/' + this.orgType + '/edit/' + orgId).then(getCompleteHandler);
+
+        function getCompleteHandler(response: any): any {
+            return response.data;
+        }
+    };
+
+    public view = (orgId: Number): ng.IPromise<any> => {
+        return this.$http.get('/organization/' + this.orgType + '/view/' + orgId).then(getCompleteHandler);
 
         function getCompleteHandler(response: any): any {
             return response.data;
@@ -19,23 +42,24 @@ export abstract class OrganizationManagementService implements IOrganizationMana
     };
 
     public update = (org: any): ng.IPromise<any> => {
-        return this.$http.post('/organization/' + this.orgType + '/update', {orgVO : org}).then(getCompleteHandler);
+        return this.$http.post('/organization/' + this.orgType + '/update', org).then(getCompleteHandler);
 
         function getCompleteHandler(response: any): any {
             return response.data;
         }
     };
+
+    public delete = (orgId: Number): ng.IPromise<any> => {
+        return this.$http.post('/organization/' + this.orgType + '/delete', {id: orgId}).then(getCompleteHandler);
+
+        function getCompleteHandler(response: any): any {
+            return response.data;
+        }
+    };
+
 
     public list = (): ng.IPromise<any> => {
         return this.$http.get('/organization/' + this.orgType + '/list').then(getCompleteHandler);
-
-        function getCompleteHandler(response: any): any {
-            return response.data;
-        }
-    };
-
-    public fetch = (orgId: Number): ng.IPromise<any> => {
-        return this.$http.post('/organization/' + this.orgType + '/id', orgId).then(getCompleteHandler);
 
         function getCompleteHandler(response: any): any {
             return response.data;
