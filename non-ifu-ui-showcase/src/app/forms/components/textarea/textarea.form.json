@@ -3,7 +3,53 @@
         "key": "textareaField1",
         "type": "textarea",
         "templateOptions": {
-            "label": "Text Area Field"
+            "label": "Text Area Field",
+            "rows": 5
+        }
+    },
+    {
+        "key": "textareaField2",
+        "type": "textarea",
+        "templateOptions": {
+            "label": "Text Area Field Disabled",
+            "disabled": true
+        }
+    },
+    {
+        "key": "textareaField3",
+        "type": "textarea",
+        "templateOptions": {
+            "label": "Text Area Field Readonly",
+            "readonly": true
+        }
+    },
+    {
+        "key": "textareaField4",
+        "type": "textarea",
+        "templateOptions": {
+            "label": "Text Area Field Mandatory",
+            "required": true,
+            "rows": 3
+        }
+    },
+    {
+        "key": "textareaField5",
+        "type": "textarea",
+        "templateOptions": {
+            "label": "Text Area Field With Translation"
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'FIELD_WITH_TRANSLATION' | translate"
+        }
+    },
+    {
+        "key": "textareaField6",
+        "type": "textarea",
+        "templateOptions": {
+            "label": "Text Area Field MinLength(10) and Maxlength(50)",
+            "minlength": 10,
+            "maxlength": 50,
+            "rows": 10
         }
     }
 ]
