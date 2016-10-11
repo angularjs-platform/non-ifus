@@ -5,5 +5,77 @@
         "templateOptions": {
             "label": "Date Field"
         }
+    },
+    {
+        "key": "dateField2",
+        "type": "datepicker",
+        "templateOptions": {
+            "label": "Date Field Disabled",
+            "disabled": true
+        }
+    },
+    {
+        "key": "dateField3",
+        "type": "datepicker",
+        "templateOptions": {
+            "label": "Date Field ReadOnly",
+            "readonly": true
+        }
+    },
+    {
+        "key": "dateField4",
+        "type": "datepicker",
+        "templateOptions": {
+            "label": "Date Field Mandatory",
+            "required": true
+        }
+    },
+    {
+        "key": "dateField5",
+        "type": "datepicker",
+        "templateOptions": {
+            "type": "text",
+            "label": "Date Field with Translation"
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'FIELD_WITH_TRANSLATION' | translate"
+        }
+    },
+    {
+        "elementAttributes": {
+            "layout-gt-sm": "row",
+            "layout-sm": "row",
+            "layout-xs": "column"
+        },
+        "fieldGroup": [
+            {
+                "key": "dateField6",
+                "type": "datepicker",
+                "className": "flex",
+                "templateOptions": {
+                    "label": "Min Date"
+                }
+            },
+            {
+                "key": "dateField7",
+                "type": "datepicker",
+                "className": "flex",
+                "templateOptions": {
+                    "label": "Max Date"
+                }
+            },
+            {
+                "key": "dateField8",
+                "type": "datepicker",
+                "className": "flex",
+                "templateOptions": {
+                    "label": "Date Field MinDate and MaxDate"
+                },
+                "expressionProperties": {
+                    "templateOptions.minDate": "model.dateField6",
+                    "templateOptions.maxDate": "model.dateField7"
+                }
+            }
+        ]
     }
 ]
