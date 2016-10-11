@@ -1,5 +1,8 @@
 [
     {
+         "template": "<h2>UI Showcase Form Components - Input</h2>"
+    },
+    {
         "key": "textField1",
         "type": "input",
         "templateOptions": {
