@@ -1,5 +1,8 @@
 [
     {
+         "template": "<h2>UI Showcase Form Components - Switch</h2>"
+    },
+    {
         "key": "switchField1",
         "type": "switch",
         "templateOptions": {
