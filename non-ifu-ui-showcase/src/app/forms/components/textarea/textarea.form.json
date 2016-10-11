@@ -1,5 +1,8 @@
 [
     {
+         "template": "<h2>UI Showcase Form Components - Textarea</h2>"
+    },
+    {
         "key": "textareaField1",
         "type": "textarea",
         "templateOptions": {
