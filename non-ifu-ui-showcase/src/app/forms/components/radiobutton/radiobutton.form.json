@@ -1,5 +1,8 @@
 [
     {
+         "template": "<h2>UI Showcase Form Components - RadioButton</h2>"
+    },
+    {
         "elementAttributes": {
             "layout-gt-sm": "row",
             "layout-sm": "row",

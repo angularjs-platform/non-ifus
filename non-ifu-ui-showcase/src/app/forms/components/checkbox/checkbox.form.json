@@ -1,5 +1,8 @@
 [
     {
+         "template": "<h2>UI Showcase Form Components - Checkbox</h2>"
+    },
+    {
         "key": "checboxkField1",
         "type": "checkbox",
         "templateOptions": {
