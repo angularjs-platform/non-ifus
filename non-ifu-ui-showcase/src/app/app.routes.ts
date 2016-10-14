@@ -19,66 +19,60 @@ export class UiRouterConfig {
     private loadMenu = (MenuService: IMenuService): any => {
         'ngInject';
 
-        const menuList: any = [
-                {
-                    'id': 'main',
-                    'menuList': [{
+        const menuList: any = {
+                    'main': [{
                             'id': 'menu-forms-components',
                             'title': 'Form Components Demo',
-                            'ref': 'menu-forms-components-ref'
+                            'reference': 'menu-forms-components-ref'
                         },
                         {
                             'id': 'menu-forms-dynamic-validations',
                             'title': 'Form Dynamic Validations Demo',
-                            'url': '#/ui-showcase/forms/validations'
+                            'url': '/ui-showcase/forms/validations'
                         },
                         {
                             'id': 'menu-forms-layouts',
                             'title': 'Form Layouts Demo',
-                            'url': '#/ui-showcase/forms/layouts'
+                            'url': '/ui-showcase/forms/layouts'
                         }
-                    ]
-                },
-                {
-                    'id': 'menu-forms-components-ref',
-                    'menuList': [{
+                    ],
+                    'menu-forms-components-ref': [{
                             'id': 'menu-forms-components-input',
                             'title': 'Input',
-                            'url': '#/ui-showcase/forms/components/input'
+                            'url': '/ui-showcase/forms/components/input'
                         },
                         {
                             'id': 'menu-forms-components-radio',
                             'title': 'Radio Button',
-                            'url': '#/ui-showcase/forms/components/radiobutton'
+                            'url': '/ui-showcase/forms/components/radiobutton'
                         },
                         {
                             'id': 'menu-forms-components-checkbox',
                             'title': 'Checkbox',
-                            'url': '#/ui-showcase/forms/components/checkbox'
+                            'url': '/ui-showcase/forms/components/checkbox'
                         },
                         {
                             'id': 'menu-forms-components-text-area',
                             'title': 'Textarea',
-                            'url': '#/ui-showcase/forms/components/textarea'
+                            'url': '/ui-showcase/forms/components/textarea'
                         },
                         {
                             'id': 'menu-forms-components-select',
                             'title': 'Select Dropdown',
-                            'url': '#/ui-showcase/forms/components/select'
+                            'url': '/ui-showcase/forms/components/select'
                         },
                         {
                             'id': 'menu-forms-components-datepicker',
                             'title': 'Date Picker',
-                            'url': '#/ui-showcase/forms/components/datepicker'
+                            'url': '/ui-showcase/forms/components/datepicker'
                         },
                         {
                             'id': 'menu-forms-components-switch',
                             'title': 'Switch',
-                            'url': '#/ui-showcase/forms/components/switch'
+                            'url': '/ui-showcase/forms/components/switch'
                         }
                     ]
-                }
-        ];
+                };
 
         MenuService.setSecondaryMenuList(menuList);
     };
