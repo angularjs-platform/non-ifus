@@ -37,6 +37,7 @@
     "THEME": "Theme",
     "DEFAULT": "Default",
     "CUSTOM": "Custom",
+    "BANK_MAINTENANCE": "Bank Maintenance",
     "BANK_ABBV_NAME": "Bank Abbrivated Name",
     "BANK_NAME": "Bank Name",
     "ADDRESS_1": "Address 1",
