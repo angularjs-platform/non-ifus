@@ -1,12 +1,7 @@
-<div layout="row" class="non-bank-cru-tpl" flex id="scrollTop">
-    <div flex="100" layout-padding>
-        <h2 translate>Bank Maintenance</h2>
-        <form name="vm.bankForm" ng-submit="vm.submit(vm.bankForm.$valid)" non-accessible-form novalidate>
-            <formly-form model="vm.bank.data.orgVO" fields="vm.bank.fields" options="vm.bank.options" form="vm.bankForm">
-                <md-input-container>
-                    <md-button class="md-raised md-primary" type="submit"><span translate>SAVE</span></md-button>
-                </md-input-container>
-            </formly-form>
-        </form>
-    </div>
-</div>
+<non-transaction-form-wrapper class="non-bank-cru-tpl" title="BANK_MAINTENANCE">
+    <non-form configuration="vm.formConfiguration" provider="vm" submit="vm.submit">
+        <md-input-container>
+            <md-button class="md-raised md-primary" type="submit"><span translate>SAVE</span></md-button>
+        </md-input-container>
+    </non-form>
+</non-transaction-form-wrapper>

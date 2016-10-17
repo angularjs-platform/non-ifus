@@ -1,7 +1,10 @@
+import { IFormDisplayState } from '@norn/non-framework';
+
 export class UiRouterConfig {
 
     constructor (
-        private $stateProvider: ng.ui.IStateProvider
+        private $stateProvider: ng.ui.IStateProvider,
+        private FormDisplayState: IFormDisplayState
     ) {
         'ngInject';
 
@@ -14,7 +17,7 @@ export class UiRouterConfig {
                         controller: 'CRUBankController',
                         controllerAs: 'vm',
                         resolve: {
-                            formState: (): string => 'create'
+                            formState: (): string => FormDisplayState.create
                         }
                     }
                 }
@@ -27,7 +30,7 @@ export class UiRouterConfig {
                         controller: 'CRUBankController',
                         controllerAs: 'vm',
                         resolve: {
-                            formState: (): string => 'view'
+                            formState: (): string => FormDisplayState.view
                         }
                     }
                 }
@@ -40,7 +43,7 @@ export class UiRouterConfig {
                         controller: 'CRUBankController',
                         controllerAs: 'vm',
                         resolve: {
-                            formState: (): string =>  'update'
+                            formState: (): string =>  FormDisplayState.update
                         }
                     }
                 }
