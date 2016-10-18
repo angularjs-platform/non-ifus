@@ -16,7 +16,8 @@
                     "required": true
                 },
                 "expressionProperties": {
-                    "templateOptions.label": "'BANK_ABBV_NAME'|translate"
+                    "templateOptions.label": "'BANK_ABBV_NAME'|translate",
+                    "templateOptions.readonly": "formState.displayState === 'update'"
                 }
             },
             {
@@ -108,14 +109,15 @@
     },
     {
         "key": "country",
-        "type": "input",
+        "type": "select",
         "templateOptions": {
             "type": "text",
             "label": "COUNTRY",
             "required": true
         },
         "expressionProperties": {
-            "templateOptions.label": "'COUNTRY'|translate"
+            "templateOptions.label": "'COUNTRY'|translate",
+            "templateOptions.options": "formOptions.data.provider.getCountryOptions(this)"
         }
     },
     {
