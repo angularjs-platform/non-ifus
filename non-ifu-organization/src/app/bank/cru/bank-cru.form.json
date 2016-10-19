@@ -275,5 +275,34 @@
         "expressionProperties": {
             "templateOptions.label": "'ISO_CODE'|translate"
         }
+    },
+    {
+        "elementAttributes": {
+          "layout": "row"
+        },
+        "fieldGroup": [
+            {
+                "type": "button",
+                "templateOptions": {
+                    "type": "submit",
+                    "label": "SUBMIT",
+                    "class": "md-primary md-hue-2"
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'SUBMIT'|translate"
+                }
+            },
+            {
+                "type": "button",
+                "templateOptions": {
+                    "label": "SAVE",
+                    "class": "md-primary",
+                    "onClick": "formOptions.formState.provider.save()"
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'SAVE'|translate"
+                }
+            }
+        ]
     }
 ]
