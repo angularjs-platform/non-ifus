@@ -20,7 +20,11 @@ export class CRUBankController {
             fields: [],
             options: {
                 formState: {
-                    displayState: this.formState
+                    displayState: this.formState,
+                    provider: {
+                        getCountryOptions: this.getCountryOptions,
+                        save: this.save
+                    }
                 }
             }
         };
@@ -61,6 +65,10 @@ export class CRUBankController {
             ];
         }
         return countryFieldScope.to.options;
+    };
+
+    public save = (): void => {
+        console.log('Save needs to be implemented');
     };
 
     private loadData = (response: any): void => {
