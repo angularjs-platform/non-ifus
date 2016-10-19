@@ -58,5 +58,7 @@
     "COUNTRY_SUB_DIVISION": "Country Sub Division",
     "STATUS": "Status",
     "ISO_CODE": "ISO Code",
+    "BANK_ROLES": "Roles for Bank",
+    "CUSTOMER_ROLES": "Roles for Customer",
     "SAVE": "Save"
 }

@@ -7,7 +7,7 @@
         },
         "fieldGroup": [
             {
-                "key": "orgName",
+                "key": "orgVO.orgName",
                 "type": "input",
                 "className": "flex-gt-sm-70 flex-sm-50 flex-xs",
                 "templateOptions": {
@@ -21,7 +21,7 @@
                 }
             },
             {
-                "key": "name",
+                "key": "orgVO.name",
                 "type": "input",
                 "className": "flex-gt-sm-30 flex-sm-50 flex-xs",
                 "templateOptions": {
@@ -43,7 +43,7 @@
         },
         "fieldGroup": [
             {
-                "key": "addressLine1",
+                "key": "orgVO.addressLine1",
                 "type": "input",
                 "className": "flex-gt-sm-40",
                 "templateOptions": {
@@ -56,7 +56,7 @@
                 }
             },
             {
-                "key": "addressLine2",
+                "key": "orgVO.addressLine2",
                 "type": "input",
                 "className": "flex-80 flex-gt-sm-40 flex-xs-100",
                 "templateOptions": {
@@ -69,7 +69,7 @@
                 }
             },
             {
-                "key": "dom",
+                "key": "orgVO.dom",
                 "type": "input",
                 "className": "flex-gt-sm-20",
                 "templateOptions": {
@@ -84,7 +84,7 @@
         ]
     },
     {
-        "key": "baseCurCode",
+        "key": "orgVO.baseCurCode",
         "type": "input",
         "templateOptions": {
             "type": "text",
@@ -96,7 +96,7 @@
         }
     },
     {
-        "key": "contactName",
+        "key": "orgVO.contactName",
         "type": "input",
         "templateOptions": {
             "type": "text",
@@ -108,7 +108,7 @@
         }
     },
     {
-        "key": "country",
+        "key": "orgVO.country",
         "type": "select",
         "templateOptions": {
             "type": "text",
@@ -117,11 +117,11 @@
         },
         "expressionProperties": {
             "templateOptions.label": "'COUNTRY'|translate",
-            "templateOptions.options": "formOptions.data.provider.getCountryOptions(this)"
+            "templateOptions.options": "formOptions.formState.provider.getCountryOptions(this)"
         }
     },
     {
-        "key": "email",
+        "key": "orgVO.email",
         "type": "input",
         "templateOptions": {
             "type": "text",
@@ -133,7 +133,7 @@
         }
     },
     {
-        "key": "fax",
+        "key": "orgVO.fax",
         "type": "input",
         "templateOptions": {
             "type": "text",
@@ -145,7 +145,7 @@
         }
     },
     {
-        "key": "language",
+        "key": "orgVO.language",
         "type": "input",
         "templateOptions": {
             "type": "text",
@@ -157,7 +157,7 @@
         }
     },
     {
-        "key": "phone",
+        "key": "orgVO.phone",
         "type": "input",
         "templateOptions": {
             "type": "text",
@@ -169,7 +169,7 @@
         }
     },
     {
-        "key": "reference",
+        "key": "orgVO.reference",
         "type": "input",
         "templateOptions": {
             "type": "text",
@@ -181,7 +181,7 @@
         }
     },
     {
-        "key": "telex",
+        "key": "orgVO.telex",
         "type": "input",
         "templateOptions": {
             "type": "text",
@@ -193,7 +193,7 @@
         }
     },
     {
-        "key": "webAddress",
+        "key": "orgVO.webAddress",
         "type": "input",
         "templateOptions": {
             "type": "text",
@@ -205,7 +205,7 @@
         }
     },
     {
-        "key": "streetName",
+        "key": "orgVO.streetName",
         "type": "input",
         "templateOptions": {
             "type": "text",
@@ -217,7 +217,7 @@
         }
     },
     {
-        "key": "postCode",
+        "key": "orgVO.postCode",
         "type": "input",
         "templateOptions": {
             "type": "text",
@@ -229,7 +229,7 @@
         }
     },
     {
-        "key": "townName",
+        "key": "orgVO.townName",
         "type": "input",
         "templateOptions": {
             "type": "text",
@@ -241,7 +241,7 @@
         }
     },
     {
-        "key": "countrySubDiv",
+        "key": "orgVO.countrySubDiv",
         "type": "input",
         "templateOptions": {
             "type": "text",
@@ -253,7 +253,7 @@
         }
     },
     {
-        "key": "status",
+        "key": "orgVO.status",
         "type": "input",
         "templateOptions": {
             "type": "text",
@@ -265,7 +265,7 @@
         }
     },
     {
-        "key": "bankVO.isoCode",
+        "key": "orgVO.bankVO.isoCode",
         "type": "input",
         "templateOptions": {
             "type": "text",
@@ -274,6 +274,32 @@
         },
         "expressionProperties": {
             "templateOptions.label": "'ISO_CODE'|translate"
+        }
+    },
+    {
+        "key": "assignedBankRoleVOList",
+        "type": "multiselect",
+        "templateOptions": {
+            "type": "text",
+            "label": "BANK_ROLES",
+            "required": true,
+            "sourceList": "AVAILABLE_BANK_ROLES"
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'BANK_ROLES'|translate"
+        }
+    },
+    {
+        "key": "assignedCustomerRoleVOList",
+        "type": "multiselect",
+        "templateOptions": {
+            "type": "text",
+            "label": "CUSTOMER_ROLES",
+            "sourceList": "AVAILABLE_CUSTOMER_ROLES",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'CUSTOMER_ROLES'|translate"
         }
     },
     {
