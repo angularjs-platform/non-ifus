@@ -3,19 +3,28 @@
          "template": "<h2>UI Showcase Form Components - Checkbox</h2>"
     },
     {
-        "key": "checboxkField1",
-        "type": "checkbox",
+        "key": "checkbox-group",
+        "wrapper": "mdLabel",
         "templateOptions": {
-            "label": "CheckBox Field"
-        }
-    },
-    {
-        "key": "checboxkField2",
-        "type": "checkbox",
-        "templateOptions": {
-            "label": "CheckBox Field Disabled",
-            "disabled": true
-        }
+            "label": "Checkbox Group"
+        },
+        "fieldGroup": [
+            {
+                "key": "checboxkField1",
+                "type": "checkbox",
+                "templateOptions": {
+                    "label": "CheckBox Field"
+                }
+            },
+            {
+                "key": "checboxkField2",
+                "type": "checkbox",
+                "templateOptions": {
+                    "label": "CheckBox Field Disabled",
+                    "disabled": true
+                }
+            }
+        ]
     },
     {
         "key": "checboxkField3",
