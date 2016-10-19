@@ -72,7 +72,7 @@ export class CRUBankController {
     };
 
     private loadData = (response: any): void => {
-        this.formConfiguration.model = response.orgVO;
+        this.formConfiguration.model = response;
     };
 
     private create = (): void => {
