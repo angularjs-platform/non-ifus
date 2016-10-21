@@ -13,8 +13,9 @@ export class CRUBankController {
         private $stateParams: ng.ui.IStateParamsService,
         private BankManagementService: IOrganizationManagementService,
         private FormDisplayState: IFormDisplayState,
-        private formState: string
-    ) {
+        private formState: string) {
+        'ngInject';
+
         this.formConfiguration = {
             model: {},
             fields: [],
