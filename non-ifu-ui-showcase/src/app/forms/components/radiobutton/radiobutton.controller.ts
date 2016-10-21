@@ -1,10 +1,12 @@
+import { FormConfiguration } from '@norn/non-framework';
+
 const componentFields: any = require('./radiobutton.form.json');
 
 export class RadiobuttonComponentsController {
 
-    public components: any;
+    public formConfiguration: FormConfiguration;
 
     constructor() {
-        this.components = { data: {}, fields: componentFields };
+        this.formConfiguration = { model: {}, fields: componentFields };
     }
 }

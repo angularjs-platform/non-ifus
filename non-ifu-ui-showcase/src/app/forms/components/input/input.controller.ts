@@ -1,10 +1,12 @@
+import { FormConfiguration } from '@norn/non-framework';
+
 const componentFields: any = require('./input.form.json');
 
 export class InputComponentsController {
 
-    public components: any;
+    public formConfiguration: FormConfiguration;
 
     constructor() {
-        this.components = { data: {}, fields: componentFields };
+        this.formConfiguration = { model: {}, fields: componentFields };
     }
 }

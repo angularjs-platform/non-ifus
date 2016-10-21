@@ -60,5 +60,11 @@
     "ISO_CODE": "ISO Code",
     "BANK_ROLES": "Roles for Bank",
     "CUSTOMER_ROLES": "Roles for Customer",
-    "SAVE": "Save"
+    "SAVE": "Save",
+    "CORRECT_FORM_INPUT_ERRORS": "Please correct the Form!",
+    "FORM_CONFIRMATION_DIALOG_TITLE_MESSAGE": "Please Confirm!",
+    "SAVE_FORM_CONFIRMATION_DIALOG_SUBJECT_MESSAGE": "You are going to save the transaction",
+    "SUBMIT_FORM_CONFIRMATION_DIALOG_SUBJECT_MESSAGE": "You are going to submit the transaction",
+    "OK": "Ok",
+    "CANCEL": "Cancel"
 }

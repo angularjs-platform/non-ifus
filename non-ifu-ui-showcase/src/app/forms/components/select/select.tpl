@@ -1,13 +1,11 @@
 <div layout="row" layout-xs="column" layout-padding flex>
     <div flex-gt-sm="70" flex>
         <div>
-            <form name="vm.componentsForm" ng-submit="vm.submit(vm.componentsForm.$valid)" non-accessible-form novalidate>
-                <formly-form model="vm.components.data" fields="vm.components.fields" form="vm.componentsForm"></formly-form>
-            </form>
+            <non-form configuration="vm.formConfiguration"></non-form>
         </div>
     </div>
     <div flex-gt-sm="30" flex>
         <h2>Form Model</h2>
-        <div>{{vm.components.data | json}}</div>
+        <div>{{vm.formConfiguration.model | json}}</div>
     </div>
 </div>
