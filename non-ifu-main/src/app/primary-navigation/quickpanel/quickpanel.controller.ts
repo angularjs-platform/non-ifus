@@ -6,7 +6,7 @@ export class PrimaryQuickpanelController {
     public secondaryLayoutType: string;
     public theme: string;
 
-    constructor(private $cookies: ng.cookies.ICookiesService,
+    constructor(private localStorageService: angular.local.storage.ILocalStorageService,
                 private $anchorScroll: ng.IAnchorScrollService,
                 private $location: ng.ILocationService,
                 private Layout: ILayoutService,
@@ -21,25 +21,25 @@ export class PrimaryQuickpanelController {
 
     public togglePrimaryNavigationContent = () : void => {
         if (this.primaryLayoutType !== 'contentOnly') {
-            this.$cookies.put('primaryLayoutType', 'contentOnly');
-            this.$cookies.put('previousPrimaryLayoutType', this.primaryLayoutType);
+            this.localStorageService.set('primaryLayoutType', 'contentOnly');
+            this.localStorageService.set('previousPrimaryLayoutType', this.primaryLayoutType);
         }
         else {
-            this.$cookies.put('primaryLayoutType', this.$cookies.get('previousPrimaryLayoutType'));
+            this.localStorageService.set('primaryLayoutType', this.localStorageService.get('previousPrimaryLayoutType'));
         }
         this.$window.location.reload();
     }
 
     public updatePrimaryLayoutStyle = () : void => {
-        this.$cookies.put('primaryLayoutType', this.primaryLayoutType);
+        this.localStorageService.set('primaryLayoutType', this.primaryLayoutType);
     }
 
     public updateSecondaryLayoutStyle = () : void => {
-        this.$cookies.put('secondaryLayoutType', this.secondaryLayoutType);
+        this.localStorageService.set('secondaryLayoutType', this.secondaryLayoutType);
     }
 
     public updateTheme = () : void => {
-        this.$cookies.put('theme', this.theme);
+        this.localStorageService.set('theme', this.theme);
     }
 
     public reload = () : void => {
