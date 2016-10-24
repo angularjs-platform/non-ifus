@@ -1,11 +1,12 @@
 import {IAuthenticationService} from '@norn/non-framework';
+import { FormConfiguration } from '@norn/non-framework';
 
 const loginFields: any = require('./password.form.json');
 
 export class PasswordController {
 
-    public login: any;
-    public showLoginBox: any;
+    public showLoginBox: boolean;
+    public formConfiguration: FormConfiguration;
 
     constructor(
         private AuthenticationService: IAuthenticationService,
@@ -15,18 +16,23 @@ export class PasswordController {
         private $timeout: ng.ITimeoutService) {
         'ngInject';
 
-        this.login = { data: {}, fields: loginFields };
+        this.formConfiguration = {
+            model: {},
+            fields: loginFields,
+            options: {
+                formState: {
+                    provider: {
+                        submit: this.submit
+                    }
+                }
+            }
+        };
         this.$timeout(this.showLoginContent, 200);
     }
 
-    public submit = (valid: boolean): void => {
-        if (valid) {
-            this.AuthenticationService.login(this.login.data.orgName, this.login.data.userName,
-                        this.login.data.password).then(this.handleSuccessfulLogin, this.handleErrorLogin);
-        }
-        else {
-            this.$mdToast.show(this.$mdToast.simple().textContent('Unable to login. Please correct your inputs!').position('top right'));
-        }
+    public submit = (form: any): void => {
+        this.AuthenticationService.login(this.formConfiguration.model['orgName'], this.formConfiguration.model['userName'],
+            this.formConfiguration.model['password']).then(this.handleSuccessfulLogin, this.handleErrorLogin);
     };
 
     private handleSuccessfulLogin = (response: any): void  => {
@@ -42,7 +48,7 @@ export class PasswordController {
 
     private handleErrorLogin = (): void => {
         this.$mdToast.show(this.$mdToast.simple().textContent('Unable to login. Please try again!'));
-        this.login.data = {};
+        this.formConfiguration.model = {};
     };
 
     private showLoginContent = (): any => {

@@ -1,10 +1,12 @@
+import { FormConfiguration } from '@norn/non-framework';
+
 const componentFields: any = require('./switch.form.json');
 
 export class SwitchComponentsController {
 
-    public components: any;
+    public formConfiguration: FormConfiguration;
 
     constructor() {
-        this.components = { data: {}, fields: componentFields };
+        this.formConfiguration = { model: {}, fields: componentFields };
     }
 }

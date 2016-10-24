@@ -1,10 +1,12 @@
+import { FormConfiguration } from '@norn/non-framework';
+
 const layoutingFields: any = require('./layouts.form.json');
 
 export class LayoutsController {
 
-    public components: any;
+    public formConfiguration: FormConfiguration;
 
     constructor() {
-        this.components = { data: {}, fields: layoutingFields };
+        this.formConfiguration = { model: {}, fields: layoutingFields };
     }
 }

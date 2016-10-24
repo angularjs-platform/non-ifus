@@ -18,12 +18,13 @@ export class CRUBankController {
 
         this.formConfiguration = {
             model: {},
-            fields: [],
+            fields: bankCRUFields,
             options: {
                 formState: {
                     displayState: this.formState,
                     provider: {
                         getCountryOptions: this.getCountryOptions,
+                        submit: this.submit,
                         save: this.save
                     }
                 }
@@ -40,22 +41,7 @@ export class CRUBankController {
         else if (this.formState === this.FormDisplayState.view) {
             BankManagementService.view(this.$stateParams['orgId']).then(this.loadData);
         }
-        this.formConfiguration.fields = bankCRUFields;
     }
-
-    public submit = (valid: boolean): void => {
-        if (valid) {
-            if (this.formState === this.FormDisplayState.create) {
-                this.create();
-            }
-            else if (this.formState === this.FormDisplayState.update) {
-                this.update();
-            }
-        }
-        else {
-            this.$mdToast.show(this.$mdToast.simple().textContent('Please correct your inputs!').position('bottom left'));
-        }
-    };
 
     public getCountryOptions = (countryFieldScope: any): any => {
         if (!countryFieldScope.to.options) {
@@ -68,12 +54,17 @@ export class CRUBankController {
         return countryFieldScope.to.options;
     };
 
-    public save = (): void => {
+    public save = (form: any): void => {
         console.log('Save needs to be implemented');
     };
 
-    private loadData = (response: any): void => {
-        this.formConfiguration.model = response;
+    public submit = (form: any): void => {
+        if (this.formState === this.FormDisplayState.create) {
+            this.create();
+        }
+        else if (this.formState === this.FormDisplayState.update) {
+            this.update();
+        }
     };
 
     private create = (): void => {
@@ -83,6 +74,10 @@ export class CRUBankController {
                     () => this.$state.go('app.banklist'),
                     // Error
                     () => this.$mdToast.show(this.$mdToast.simple().textContent('Error while submitting')));
+    };
+
+    private loadData = (response: any): void => {
+        this.formConfiguration.model = response;
     };
 
     private update = (): void => {

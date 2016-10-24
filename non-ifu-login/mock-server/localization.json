@@ -4,5 +4,6 @@
     "PASSWORD": "Password",
     "LOGIN": "Login",
     "FIELD_REQUIRED": "Value Is Required!",
-    "FIELD_MAX_LENGTH_EXCEEDED": "Maximum Length Exceeded!"
+    "FIELD_MAX_LENGTH_EXCEEDED": "Maximum Length Exceeded!",
+    "CORRECT_FORM_INPUT_ERRORS": "Please correct the Form!"
 }

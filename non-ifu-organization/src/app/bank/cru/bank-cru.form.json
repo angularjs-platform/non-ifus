@@ -117,7 +117,7 @@
         },
         "expressionProperties": {
             "templateOptions.label": "'COUNTRY'|translate",
-            "templateOptions.options": "formOptions.formState.provider.getCountryOptions(this)"
+            "templateOptions.options": "formState.provider.getCountryOptions(this)"
         }
     },
     {
@@ -308,22 +308,29 @@
         },
         "fieldGroup": [
             {
-                "type": "button",
+                "type": "submitbutton",
                 "templateOptions": {
-                    "type": "submit",
                     "label": "SUBMIT",
-                    "class": "md-primary md-hue-2"
+                    "class": "md-primary md-hue-2",
+                    "actionConfig": {
+                        "action": "SUBMIT",
+                        "forwardToMethod": "submit",
+                        "validateForm": true
+                    }
                 },
                 "expressionProperties": {
                     "templateOptions.label": "'SUBMIT'|translate"
                 }
             },
             {
-                "type": "button",
+                "type": "submitbutton",
                 "templateOptions": {
                     "label": "SAVE",
                     "class": "md-primary",
-                    "onClick": "formOptions.formState.provider.save()"
+                    "actionConfig": {
+                        "action": "SAVE",
+                        "forwardToMethod": "save"
+                    }
                 },
                 "expressionProperties": {
                     "templateOptions.label": "'SAVE'|translate"
