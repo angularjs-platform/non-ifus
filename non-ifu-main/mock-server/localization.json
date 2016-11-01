@@ -62,9 +62,12 @@
     "CUSTOMER_ROLES": "Roles for Customer",
     "SAVE": "Save",
     "CORRECT_FORM_INPUT_ERRORS": "Please correct the Form!",
+    "SUBMISSION_ERROR": "Error while submitting",
     "FORM_CONFIRMATION_DIALOG_TITLE_MESSAGE": "Please Confirm!",
     "SAVE_FORM_CONFIRMATION_DIALOG_SUBJECT_MESSAGE": "You are going to save the transaction",
     "SUBMIT_FORM_CONFIRMATION_DIALOG_SUBJECT_MESSAGE": "You are going to submit the transaction",
     "OK": "Ok",
-    "CANCEL": "Cancel"
+    "CANCEL": "Cancel",
+    "REGEX_ALPHA_MESSAGE": "Value can only have Alphabets!",
+    "ERROR_MESSAGE_UNIQUE": "{{label}} you have entered already exists!"
 }
