@@ -4,6 +4,20 @@ function sendSuccess(req, res, next) {
     });
 }
 
+function validateUnique(req, res, next) {
+    // When the Bank Abbv Name is 'NON', return false (means it already exists).
+    if (req.body.bankAbbvName === 'NON') {
+        res.json({
+            'valid': false
+        });
+    }
+    else {
+        res.json({
+            'valid': true
+        });
+    }
+}
+
 function getCountries(req, res, next) {
     res.json([{
         'countryVO': {
@@ -576,6 +590,11 @@ var apiEndpoints = {
         method: 'POST',
         url: '/organization/bank/delete',
         callback: sendSuccess
+    },
+    {
+        method: 'POST',
+        url: '/organization/bank/unique',
+        callback: validateUnique
     }]
 };
 
