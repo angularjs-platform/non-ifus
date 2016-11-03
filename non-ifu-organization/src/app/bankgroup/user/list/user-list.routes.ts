@@ -1,4 +1,4 @@
-import {IOrganizationManagementService} from '../../shared/shared.model';
+import { IEntityManagementService } from '@norn/non-framework';
 
 export class UiRouterConfig {
 
@@ -8,25 +8,25 @@ export class UiRouterConfig {
         'ngInject';
 
         $stateProvider
-            .state('app.customerlist', {
-                url: '/customer/list',
+            .state('app.bankGroupUserList', {
+                url: '/bankgroup/user/list',
                 views: {
                     'content@app': {
                         template: '<non-data-grid options="$resolve.data" provider="vm"> </non-data-grid>',
                         resolve: {
                             data: this.getData
                         },
-                        controller: 'ListCustomerController',
+                        controller: 'ListBankGroupUserController',
                         controllerAs: 'vm'
                     }
                 }
             });
     }
 
-    private getData = (CustomerManagementService: IOrganizationManagementService): any => {
+    private getData = (BankGroupUserManagementService: IEntityManagementService): any => {
         'ngInject';
 
-        return CustomerManagementService.list();
+        return BankGroupUserManagementService.list();
     };
 
 }
