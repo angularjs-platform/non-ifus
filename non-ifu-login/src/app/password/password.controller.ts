@@ -21,7 +21,7 @@ export class PasswordController {
             fields: loginFields,
             options: {
                 formState: {
-                    provider: {
+                    viewManager: {
                         submit: this.submit
                     }
                 }

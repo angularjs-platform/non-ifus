@@ -13,11 +13,26 @@
                 "templateOptions": {
                     "type": "text",
                     "label": "BANK_ABBV_NAME",
-                    "required": true
+                    "required": true,
+                    "maxlength": 20,
+                    "onKeydown": "this.options.formControl.$invalid = false;",
+                    "pattern": "([a-zA-Z]+)"
                 },
                 "expressionProperties": {
                     "templateOptions.label": "'BANK_ABBV_NAME'|translate",
                     "templateOptions.readonly": "formState.displayState === 'update'"
+                },
+                "asyncValidators": {
+                    "validatorUnique": "formState.validator.GenericFormValidationService.validateUniqueAsync('/organization/bank/unique', {'bankAbbvName': $viewValue})"
+                },
+                "validation": {
+                    "messages": {
+                        "pattern": "'REGEX_ALPHA_MESSAGE'|translate",
+                        "validatorUnique": "'ERROR_MESSAGE_UNIQUE' | translate: { label: this.to.label }"
+                    }
+                },
+                "modelOptions": {
+                    "updateOn": "change"
                 }
             },
             {
@@ -117,7 +132,7 @@
         },
         "expressionProperties": {
             "templateOptions.label": "'COUNTRY'|translate",
-            "templateOptions.options": "formState.provider.getCountryOptions(this)"
+            "templateOptions.options": "formState.viewManager.getCountryOptions(this)"
         }
     },
     {

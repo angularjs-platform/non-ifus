@@ -22,7 +22,7 @@ export class CRUBankController {
             options: {
                 formState: {
                     displayState: this.formState,
-                    provider: {
+                    viewManager: {
                         getCountryOptions: this.getCountryOptions,
                         submit: this.submit,
                         save: this.save
