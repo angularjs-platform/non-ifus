@@ -1,4 +1,4 @@
-import {IOrganizationManagementService} from '../../shared/shared.model';
+import { IEntityManagementService } from '@norn/non-framework';
 
 export class UiRouterConfig {
 
@@ -23,7 +23,7 @@ export class UiRouterConfig {
             });
     }
 
-    private getData = (BankManagementService: IOrganizationManagementService): any => {
+    private getData = (BankManagementService: IEntityManagementService): any => {
         'ngInject';
 
         return BankManagementService.list();
