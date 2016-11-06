@@ -1,4 +1,4 @@
-import { IEntityManagementService } from '@norn/non-framework';
+import {IEntityManagementService} from '@norn/non-shared-system-administration';
 
 export class ListBankController {
 
