@@ -1,4 +1,4 @@
-import {EntityManagementService, IEntityManagementService} from '@norn/non-framework';
+import {EntityManagementService, IEntityManagementService} from '@norn/non-shared-system-administration';
 
 export class BankGroupUserManagementService extends EntityManagementService implements IEntityManagementService {
 

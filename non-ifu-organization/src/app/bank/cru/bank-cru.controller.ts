@@ -1,4 +1,5 @@
-import { FormConfiguration, IFormDisplayState, IEntityManagementService } from '@norn/non-framework';
+import { FormConfiguration, IFormDisplayState} from '@norn/non-framework';
+import {IEntityManagementService} from '@norn/non-shared-system-administration';
 
 const bankCRUFields: any = require('./bank-cru.form.json');
 
