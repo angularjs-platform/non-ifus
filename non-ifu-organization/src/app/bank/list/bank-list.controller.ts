@@ -1,11 +1,11 @@
-import {IOrganizationManagementService } from '../../shared/shared.model';
+import { IEntityManagementService } from '@norn/non-framework';
 
 export class ListBankController {
 
     constructor(
         private $mdToast: ng.material.IToastService,
         private $state: ng.ui.IStateService,
-        private BankManagementService: IOrganizationManagementService) {
+        private BankManagementService: IEntityManagementService) {
         'ngInject';
     }
 

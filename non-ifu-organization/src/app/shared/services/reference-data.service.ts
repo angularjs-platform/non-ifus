@@ -1,4 +1,4 @@
-import {IReferenceDataService} from './organization-management';
+import {IReferenceDataService} from './reference-data';
 
 export class ReferenceDataService implements IReferenceDataService {
 

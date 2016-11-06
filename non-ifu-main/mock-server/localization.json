@@ -69,5 +69,17 @@
     "OK": "Ok",
     "CANCEL": "Cancel",
     "REGEX_ALPHA_MESSAGE": "Value can only have Alphabets!",
-    "ERROR_MESSAGE_UNIQUE": "{{label}} you have entered already exists!"
+    "ERROR_MESSAGE_UNIQUE": "{{label}} you have entered already exists!",
+    "USER_NAME": "User Name",
+    "FIRST_NAME": "First Name",
+    "LAST_NAME": "Last Name",
+    "CURRENCY": "Currency",
+    "TIME_ZONE": "Time Zone",
+    "EMPLOYEE_DEPARTMENT": "Employee Department",
+    "EMPLOYEE_NUMBER": "Employee Number",
+    "LEGAL_COUNTRY": "Legal Country",
+    "LEGAL_NUMBER": "Legal Number",
+    "LEGAL_TYPE": "Legal Type",
+    "USER_ROLES": "Roles for User",
+    "CORRESPONDENCE_LANGUAGE": "Correspondence Language"
 }

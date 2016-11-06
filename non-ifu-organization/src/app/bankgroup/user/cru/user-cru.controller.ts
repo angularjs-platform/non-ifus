@@ -1,8 +1,8 @@
 import { FormConfiguration, IFormDisplayState, IEntityManagementService } from '@norn/non-framework';
 
-const bankCRUFields: any = require('./bank-cru.form.json');
+const userCRUFields: any = require('./user-cru.form.json');
 
-export class CRUBankController {
+export class CRUBankGroupUserController {
 
     public formConfiguration: FormConfiguration;
 
@@ -10,14 +10,14 @@ export class CRUBankController {
         private $mdToast: ng.material.IToastService,
         private $state: ng.ui.IStateService,
         private $stateParams: ng.ui.IStateParamsService,
-        private BankManagementService: IEntityManagementService,
+        private BankGroupUserManagementService: IEntityManagementService,
         private FormDisplayState: IFormDisplayState,
         private formState: string) {
         'ngInject';
 
         this.formConfiguration = {
             model: {},
-            fields: bankCRUFields,
+            fields: userCRUFields,
             options: {
                 formState: {
                     displayState: this.formState,
@@ -32,13 +32,13 @@ export class CRUBankController {
 
         // Load initial data based on field types
         if (this.formState === this.FormDisplayState.create) {
-            BankManagementService.initiate().then(this.loadData);
+            BankGroupUserManagementService.initiate().then(this.loadData);
         }
         else if (this.formState === this.FormDisplayState.update)  {
-            BankManagementService.edit(this.$stateParams['orgId']).then(this.loadData);
+            BankGroupUserManagementService.edit(this.$stateParams['userId']).then(this.loadData);
         }
         else if (this.formState === this.FormDisplayState.view) {
-            BankManagementService.view(this.$stateParams['orgId']).then(this.loadData);
+            BankGroupUserManagementService.view(this.$stateParams['userId']).then(this.loadData);
         }
     }
 
@@ -67,10 +67,10 @@ export class CRUBankController {
     };
 
     private create = (): void => {
-        this.BankManagementService.create(this.formConfiguration.model)
+        this.BankGroupUserManagementService.create(this.formConfiguration.model)
                 .then(
                     // Success
-                    () => this.$state.go('app.banklist'),
+                    () => this.$state.go('app.bankGroupUserList'),
                     // Error
                     () => this.$mdToast.show(this.$mdToast.simple().textContent('Error while submitting')));
     };
@@ -80,10 +80,10 @@ export class CRUBankController {
     };
 
     private update = (): void => {
-        this.BankManagementService.update(this.formConfiguration.model)
+        this.BankGroupUserManagementService.update(this.formConfiguration.model)
                 .then(
                     // Success
-                    () => this.$state.go('app.banklist'),
+                    () => this.$state.go('app.bankGroupUserList'),
                     // Error
                     () => this.$mdToast.show(this.$mdToast.simple().textContent('Error while submitting')));
     };
