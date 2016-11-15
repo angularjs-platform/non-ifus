@@ -326,7 +326,7 @@
                 "type": "submitbutton",
                 "templateOptions": {
                     "label": "SUBMIT",
-                    "class": "md-primary md-hue-2",
+                    "class": "md-primary md-hue-3",
                     "actionConfig": {
                         "action": "SUBMIT",
                         "forwardToMethod": "submit",

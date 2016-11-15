@@ -1,4 +1,4 @@
-import {IAuthenticationService} from '@norn/non-framework';
+import {IAuthenticationService} from '@norn/non-shared-authentication-management';
 import { FormConfiguration } from '@norn/non-framework';
 
 const loginFields: any = require('./password.form.json');
