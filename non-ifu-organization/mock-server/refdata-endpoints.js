@@ -12,16 +12,44 @@ function getCountries(req, res, next) {
 }
 
 function getCurrencies(req, res, next) {
-    res.json([{
-        'currencyVO': {
-            'currencyCode': 'USD'
-        }
-    },
-    {
-        'currencyVO': {
-            'currencyCode': 'SGD'
-        }
-    }]);
+    res.json({
+        "title" : "LISTOFCURRENCIES",
+        "columnDefs" : [
+            {
+                "name" : "isocode",
+                "labelKey" : "ISOCODE",
+                "visible" : true,
+                "type" : null,
+                "options" : null
+            },
+            {
+                "name" : "name",
+                "labelKey" : "CURRENCY_NAME",
+                "visible" : true,
+                "type" : null,
+                "options" : null
+            }
+        ],
+        "data" :
+        [
+            {
+                "isocode" : "EUR",
+                "name" : "Euro"
+            },
+            {
+                "isocode" : "GBP",
+                "name" : "Pound Sterling"
+            },
+            {
+                "isocode" : "USD",
+                "name" : "US Dollars"
+            },
+            {
+                "isocode" : "INR",
+                "name" : "Indian Rupees"
+            }
+        ]
+    });
 }
 
 var apiEndPoints = [

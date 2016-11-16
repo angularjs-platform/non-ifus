@@ -1,5 +1,6 @@
 import { FormConfiguration, IFormDisplayState} from '@norn/non-framework';
 import {IEntityManagementService} from '@norn/non-shared-system-administration';
+import { IReferenceDataService } from '../../shared/shared.model';
 
 const bankCRUFields: any = require('./bank-cru.form.json');
 
@@ -13,6 +14,7 @@ export class CRUBankController {
         private $stateParams: ng.ui.IStateParamsService,
         private BankManagementService: IEntityManagementService,
         private FormDisplayState: IFormDisplayState,
+        private ReferenceDataService: IReferenceDataService,
         private formState: string) {
         'ngInject';
 
@@ -24,6 +26,7 @@ export class CRUBankController {
                     displayState: this.formState,
                     viewManager: {
                         getCountryOptions: this.getCountryOptions,
+                        getCurrentyOptions: this.getCurrentyOptions,
                         submit: this.submit,
                         save: this.save
                     }
@@ -52,6 +55,10 @@ export class CRUBankController {
             ];
         }
         return countryFieldScope.to.options;
+    };
+
+    public getCurrentyOptions = (): any => {
+        return this.ReferenceDataService.getCurrencyData();
     };
 
     public save = (form: any): void => {
