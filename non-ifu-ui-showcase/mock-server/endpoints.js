@@ -11,7 +11,18 @@ function getLocalization(req, res, next) {
             FIELD_WITH_TRANSLATION: 'Field With Translation',
             FIELD_NOT_DATE: "The entered value is not a date!",
             FIELD_MIN_DATE_NEEDED: "Date is too early!",
-            FIELD_MAX_DATE_EXCEEDED: "Date is too late!"
+            FIELD_MAX_DATE_EXCEEDED: "Date is too late!",
+            UI_SHOWCASE: "UI Showcase",
+            FORMS: "Forms",
+            INPUT_SHOWCASE: "Input",
+            CHECKBOX_SHOWCASE: "Checkbox",
+            RADIOBUTTON_SHOWCASE: "Radiobutton",
+            SELECT_SHOWCASE: "Select",
+            DATEPICKER_SHOWCASE: "Datepicker",
+            SWITCH_SHOWCASE: "Switch",
+            TEXTAREA_SHOWCASE: "Textarea",
+            VALIDATIONS_SHOWCASE: "Dynamic Validations",
+            LAYOUTS_SHOWCASE: "Responsive Layouts"
         });
 }
 

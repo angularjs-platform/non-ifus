@@ -1,7 +1,9 @@
+import {IStateProvider} from '@norn/non-framework';
+
 export class UiRouterConfig {
 
     constructor (
-        private $stateProvider: ng.ui.IStateProvider
+        private $stateProvider: IStateProvider
     ) {
         'ngInject';
         $stateProvider
@@ -11,6 +13,10 @@ export class UiRouterConfig {
                     'content@app': {
                         template: require('./forms.tpl')
                     }
+                },
+                ncyBreadcrumb: {
+                    label: 'FORMS',
+                    parent: 'app.ui-showcase'
                 }
             })
             .state('app.ui-showcase.forms-components-input', {
@@ -21,6 +27,10 @@ export class UiRouterConfig {
                         controller: 'InputComponentsController',
                         controllerAs: 'vm'
                     }
+                },
+                ncyBreadcrumb: {
+                    label: 'INPUT_SHOWCASE',
+                    parent: 'app.ui-showcase.forms'
                 }
             })
             .state('app.ui-showcase.forms-components-checkbox', {
@@ -31,6 +41,10 @@ export class UiRouterConfig {
                         controller: 'CheckboxComponentsController',
                         controllerAs: 'vm'
                     }
+                },
+                ncyBreadcrumb: {
+                    label: 'CHECKBOX_SHOWCASE',
+                    parent: 'app.ui-showcase.forms'
                 }
             })
             .state('app.ui-showcase.forms-components-radiobutton', {
@@ -41,6 +55,10 @@ export class UiRouterConfig {
                         controller: 'RadiobuttonComponentsController',
                         controllerAs: 'vm'
                     }
+                },
+                ncyBreadcrumb: {
+                    label: 'RADIOBUTTON_SHOWCASE',
+                    parent: 'app.ui-showcase.forms'
                 }
             })
             .state('app.ui-showcase.forms-components-select', {
@@ -51,6 +69,10 @@ export class UiRouterConfig {
                         controller: 'SelectComponentsController',
                         controllerAs: 'vm'
                     }
+                },
+                ncyBreadcrumb: {
+                    label: 'SELECT_SHOWCASE',
+                    parent: 'app.ui-showcase.forms'
                 }
             })
             .state('app.ui-showcase.forms-components-datepicker', {
@@ -61,6 +83,10 @@ export class UiRouterConfig {
                         controller: 'DatepickerComponentsController',
                         controllerAs: 'vm'
                     }
+                },
+                ncyBreadcrumb: {
+                    label: 'DATEPICKER_SHOWCASE',
+                    parent: 'app.ui-showcase.forms'
                 }
             })
             .state('app.ui-showcase.forms-components-switch', {
@@ -71,6 +97,10 @@ export class UiRouterConfig {
                         controller: 'SwitchComponentsController',
                         controllerAs: 'vm'
                     }
+                },
+                ncyBreadcrumb: {
+                    label: 'SWITCH_SHOWCASE',
+                    parent: 'app.ui-showcase.forms'
                 }
             })
             .state('app.ui-showcase.forms-components-textarea', {
@@ -81,6 +111,10 @@ export class UiRouterConfig {
                         controller: 'TextareaComponentsController',
                         controllerAs: 'vm'
                     }
+                },
+                ncyBreadcrumb: {
+                    label: 'TEXTAREA_SHOWCASE',
+                    parent: 'app.ui-showcase.forms'
                 }
             })
             .state('app.ui-showcase.forms-dynamic-validations', {
@@ -91,6 +125,10 @@ export class UiRouterConfig {
                         controller: 'DynamicValidationsController',
                         controllerAs: 'vm'
                     }
+                },
+                ncyBreadcrumb: {
+                    label: 'VALIDATIONS_SHOWCASE',
+                    parent: 'app.ui-showcase.forms'
                 }
             })
             .state('app.ui-showcase.forms-layouts', {
@@ -101,6 +139,10 @@ export class UiRouterConfig {
                         controller: 'LayoutsController',
                         controllerAs: 'vm'
                     }
+                },
+                ncyBreadcrumb: {
+                    label: 'LAYOUTS_SHOWCASE',
+                    parent: 'app.ui-showcase.forms'
                 }
             });
     }

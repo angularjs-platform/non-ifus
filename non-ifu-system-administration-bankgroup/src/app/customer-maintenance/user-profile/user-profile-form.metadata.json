@@ -1,0 +1,402 @@
+[
+     {
+        "wrapper": "fieldset",
+        "templateOptions": {
+            "label": "LOGIN_DETAILS"
+        },
+        "elementAttributes": {
+          "layout-gt-sm": "row",
+          "layout-sm": "column",
+          "layout-xs": "column"
+        },
+        "fieldGroup": [
+            {
+                "key": "userVO.userName",
+                "type": "input",
+                "className": "flex",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "USER_NAME",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'USER_NAME'|translate",
+                    "templateOptions.readonly": "formState.displayState === 'update'"
+                }
+            },
+            {
+                "key": "userVO.password",
+                "type": "input",
+                "className": "flex",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "PASSWORD",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'PASSWORD'|translate"
+                }
+            },
+            {
+                "key": "userVO.status",
+                "type": "input",
+                "className": "flex",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "STATUS",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'STATUS'|translate"
+                }
+            }
+        ]
+    },
+    {
+        "wrapper": "fieldset",
+        "templateOptions": {
+            "label": "PERSONAL_DETAILS"
+        },
+        "elementAttributes": {
+          "layout-gt-sm": "column",
+          "layout-sm": "column",
+          "layout-xs": "column"
+        },
+        "fieldGroup": [
+            {
+                "elementAttributes": {
+                    "layout-gt-sm": "row",
+                    "layout-sm": "column",
+                    "layout-xs": "column"
+                },
+                "fieldGroup": [
+                    {
+                        "key": "userVO.firstName",
+                        "type": "input",
+                        "className": "flex",
+                        "templateOptions": {
+                            "type": "text",
+                            "label": "FIRST_NAME",
+                            "required": true
+                        },
+                        "expressionProperties": {
+                            "templateOptions.label": "'FIRST_NAME'|translate"
+                        }
+                    },
+                    {
+                        "key": "userVO.lastName",
+                        "type": "input",
+                        "className": "flex",
+                        "templateOptions": {
+                            "type": "text",
+                            "label": "LAST_NAME",
+                            "required": true
+                        },
+                        "expressionProperties": {
+                            "templateOptions.label": "'LAST_NAME'|translate"
+                        }
+                    }
+                ]
+            },
+            {
+                "elementAttributes": {
+                    "layout-gt-sm": "row",
+                    "layout-sm": "column",
+                    "layout-xs": "column"
+                },
+                "fieldGroup": [
+                    {
+                        "key": "userVO.addressLine1",
+                        "type": "input",
+                        "className": "flex-gt-sm-40",
+                        "templateOptions": {
+                            "type": "text",
+                            "label": "ADDRESS_1",
+                            "required": true
+                        },
+                        "expressionProperties": {
+                            "templateOptions.label": "'ADDRESS_1'|translate"
+                        }
+                    },
+                    {
+                        "key": "userVO.addressLine2",
+                        "type": "input",
+                        "className": "flex-80 flex-gt-sm-40 flex-xs-100",
+                        "templateOptions": {
+                            "type": "text",
+                            "label": "ADDRESS_2",
+                            "required": true
+                        },
+                        "expressionProperties": {
+                            "templateOptions.label": "'ADDRESS_2'|translate"
+                        }
+                    },
+                    {
+                        "key": "userVO.dom",
+                        "type": "input",
+                        "className": "flex-gt-sm-20",
+                        "templateOptions": {
+                            "type": "text",
+                            "label": "DOM",
+                            "required": true
+                        },
+                        "expressionProperties": {
+                            "templateOptions.label": "'DOM'|translate"
+                        }
+                    }
+                ]
+            },
+            {
+                "elementAttributes": {
+                    "layout-gt-sm": "row",
+                    "layout-sm": "column",
+                    "layout-xs": "column"
+                },
+                "fieldGroup": [
+                    {
+                        "key": "userVO.country",
+                        "type": "select",
+                        "className": "flex-gt-sm-30",
+                        "templateOptions": {
+                            "type": "text",
+                            "label": "COUNTRY",
+                            "required": true
+                        },
+                        "expressionProperties": {
+                            "templateOptions.label": "'COUNTRY'|translate",
+                            "templateOptions.options": "formState.viewManager.getCountryOptions(this)"
+                        }
+                    },
+                    {
+                        "key": "userVO.email",
+                        "type": "input",
+                        "className": "flex-gt-sm-30",
+                        "templateOptions": {
+                            "type": "text",
+                            "label": "EMAIL",
+                            "required": true
+                        },
+                        "expressionProperties": {
+                            "templateOptions.label": "'EMAIL'|translate"
+                        }
+                    },
+                    {
+                        "key": "userVO.phone",
+                        "type": "input",
+                        "className": "flex-gt-sm-20",
+                        "templateOptions": {
+                            "type": "text",
+                            "label": "PHONE",
+                            "required": true
+                        },
+                        "expressionProperties": {
+                            "templateOptions.label": "'PHONE'|translate"
+                        }
+                    },
+                    {
+                        "key": "userVO.fax",
+                        "type": "input",
+                        "className": "flex-gt-sm-20",
+                        "templateOptions": {
+                            "type": "text",
+                            "label": "FAX",
+                            "required": true
+                        },
+                        "expressionProperties": {
+                            "templateOptions.label": "'FAX'|translate"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "wrapper": "fieldset",
+        "templateOptions": {
+            "label": "OTHER_DETAILS"
+        },
+        "elementAttributes": {
+          "layout": "column"
+        },
+        "fieldGroup": [
+            {
+                "key": "userVO.curCode",
+                "type": "input",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "CURRENCY",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'CURRENCY'|translate"
+                }
+            },
+            {
+                "key": "userVO.language",
+                "type": "input",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "LANGUAGE",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'LANGUAGE'|translate"
+                }
+            },
+
+            {
+                "key": "userVO.reference",
+                "type": "input",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "REFERENCE",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'REFERENCE'|translate"
+                }
+            },
+            {
+                "key": "userVO.timeZone",
+                "type": "input",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "TIME_ZONE",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'TIME_ZONE'|translate"
+                }
+            },
+            {
+                "key": "userVO.employeeDepartment",
+                "type": "input",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "EMPLOYEE_DEPARTMENT",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'EMPLOYEE_DEPARTMENT'|translate"
+                }
+            },
+            {
+                "key": "userVO.employeeNumber",
+                "type": "input",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "EMPLOYEE_NUMBER",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'EMPLOYEE_NUMBER'|translate"
+                }
+            },
+            {
+                "key": "userVO.legalCountry",
+                "type": "select",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "LEGAL_COUNTRY",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'LEGAL_COUNTRY'|translate",
+                    "templateOptions.options": "formState.viewManager.getCountryOptions(this)"
+                }
+            },
+            {
+                "key": "userVO.legalNo",
+                "type": "input",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "LEGAL_NUMBER",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'LEGAL_NUMBER'|translate"
+                }
+            },
+            {
+                "key": "userVO.legalType",
+                "type": "input",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "LEGAL_TYPE",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'LEGAL_TYPE'|translate"
+                }
+            },
+            {
+                "key": "userVO.correspondenceLanguage",
+                "type": "input",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "CORRESPONDENCE_LANGUAGE",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'CORRESPONDENCE_LANGUAGE'|translate"
+                }
+            }
+        ]
+    },
+    {
+        "wrapper": "fieldset",
+        "templateOptions": {
+            "label": "USER_ROLES"
+        },
+        "elementAttributes": {
+          "layout-gt-sm": "column"
+        },
+        "fieldGroup": [
+            {
+                "key": "assignedRoleVOList",
+                "type": "multiselect",
+                "templateOptions": {
+                    "type": "text",
+                    "required": true,
+                    "sourceList": "AVAILABLE_CUSTOMER_USER_ROLES"
+                }
+            }
+        ]
+    },
+    {
+        "elementAttributes": {
+          "layout": "row"
+        },
+        "fieldGroup": [
+            {
+                "type": "submitbutton",
+                "templateOptions": {
+                    "label": "SUBMIT",
+                    "class": "md-primary md-hue-2",
+                    "actionConfig": {
+                        "action": "SUBMIT",
+                        "forwardToMethod": "submit",
+                        "validateForm": true
+                    }
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'SUBMIT'|translate"
+                }
+            },
+            {
+                "type": "submitbutton",
+                "templateOptions": {
+                    "label": "SAVE",
+                    "class": "md-primary",
+                    "actionConfig": {
+                        "action": "SAVE",
+                        "forwardToMethod": "save"
+                    }
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'SAVE'|translate"
+                }
+            }
+        ]
+    }
+]
