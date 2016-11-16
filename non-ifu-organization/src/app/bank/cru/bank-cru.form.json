@@ -100,11 +100,16 @@
     },
     {
         "key": "orgVO.baseCurCode",
-        "type": "input",
+        "type": "lookup",
         "templateOptions": {
-            "type": "text",
             "label": "BASE_CURRENCY",
-            "required": true
+            "required": true,
+            "mapping": {
+                "isocode": "orgVO.baseCurCode",
+                "name": "orgVO.bankVO.isoCode"
+            },
+            "type": "LOAD_ALWAYS",
+            "dataSource": "getCurrentyOptions"
         },
         "expressionProperties": {
             "templateOptions.label": "'BASE_CURRENCY'|translate"
