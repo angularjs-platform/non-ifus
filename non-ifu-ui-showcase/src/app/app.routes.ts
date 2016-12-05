@@ -1,9 +1,9 @@
-import {IMenuService} from '@norn/non-framework';
+import {IMenuService, IStateProvider} from '@norn/non-framework';
 
 export class UiRouterConfig {
 
     constructor (
-        private $stateProvider: ng.ui.IStateProvider
+        private $stateProvider: IStateProvider
     ) {
         'ngInject';
         $stateProvider
@@ -12,6 +12,9 @@ export class UiRouterConfig {
                 resolve: {
                     loadMenu: this.loadMenu,
                     loadLocalization: this.loadLocalization
+                },
+                ncyBreadcrumb: {
+                    label: 'UI_SHOWCASE'
                 }
             });
     }
@@ -22,17 +25,17 @@ export class UiRouterConfig {
         const menuList: any = {
                     'main': [{
                             'id': 'menu-forms-components',
-                            'title': 'Form Components Demo',
+                            'title': 'Form Components',
                             'reference': 'menu-forms-components-ref'
                         },
                         {
                             'id': 'menu-forms-dynamic-validations',
-                            'title': 'Form Dynamic Validations Demo',
+                            'title': 'Form Validations',
                             'url': '/ui-showcase/forms/validations'
                         },
                         {
                             'id': 'menu-forms-layouts',
-                            'title': 'Form Layouts Demo',
+                            'title': 'Form Layouts',
                             'url': '/ui-showcase/forms/layouts'
                         }
                     ],
