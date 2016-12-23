@@ -24,6 +24,7 @@ export class BGABankProfileFormController {
                     displayState: this.formState,
                     viewManager: {
                         getCountryOptions: this.getCountryOptions,
+                        getCurrencyOptions: this.getCurrencyOptions,
                         submit: this.submit,
                         save: this.save
                     }
@@ -65,6 +66,12 @@ export class BGABankProfileFormController {
         else if (this.formState === this.FormDisplayState.update) {
             this.update();
         }
+    };
+
+
+    // TODO: Remove this as it is dummy implementataion
+    public getCurrencyOptions = (): any => {
+        return this.BGABankProfileService.getListUrl();
     };
 
     private create = (): void => {

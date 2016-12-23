@@ -1,8 +1,8 @@
-import {IStateProvider, IFormDisplayState} from '@norn/non-framework';
+import {IStateProvider, IFormDisplayState, IDataGridService} from '@norn/non-framework';
 import {IEntityManagementService} from '@norn/non-shared-system-administration';
 
 const userProfileTpl: string = '<non-page-content-wrapper layout="column" title="USER_PROFILE_MAINTENANCE"><non-form configuration="vm.formConfiguration"></non-form></non-page-content-wrapper>';
-const userProfileList: string = '<non-data-grid options="$resolve.listConfiguration" provider="vm"> </non-data-grid>';
+const userProfileList: string = '<non-data-grid source="$resolve.source" provider="vm"> </non-data-grid>';
 
 export class UiRouterConfig {
 
@@ -74,7 +74,7 @@ export class UiRouterConfig {
                     'content@app': {
                         template: userProfileList,
                         resolve: {
-                            listConfiguration: this.getListConfiguration
+                            source: this.getListSource
                         },
                         controller: 'CACustomerUserProfileListController',
                         controllerAs: 'vm'
@@ -86,9 +86,11 @@ export class UiRouterConfig {
             });
     }
 
-    private getListConfiguration = (CACustomerUserProfileService: IEntityManagementService): any => {
+    private getListSource = (
+        CACustomerUserProfileService: IEntityManagementService,
+        DataGridService: IDataGridService): any => {
         'ngInject';
 
-        return CACustomerUserProfileService.list();
+        return DataGridService.getDataSourceObject(CACustomerUserProfileService.getListUrl());
     };
 }

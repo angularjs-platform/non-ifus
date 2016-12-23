@@ -1,8 +1,8 @@
-import {IStateProvider, IFormDisplayState} from '@norn/non-framework';
+import {IStateProvider, IFormDisplayState, IDataGridService} from '@norn/non-framework';
 
 const profileTpl: string = '<non-page-content-wrapper layout="column" title="CUSTOMER_PROFILE_MAINTENANCE"><non-form configuration="vm.formConfiguration"></non-form></non-page-content-wrapper>';
-const profileList: string = '<non-data-grid options="$resolve.listConfiguration" provider="vm"> </non-data-grid><md-button class="md-primary md-raised md-ink-ripple" ng-click="vm.add()" translate>ADD</md-button>';
-const selectBankList: string = '<non-data-grid options="$resolve.listBankConfiguration" provider="vm"> </non-data-grid>';
+const profileList: string = '<non-data-grid source="$resolve.source" provider="vm"> </non-data-grid><md-button class="md-primary md-raised md-ink-ripple" ng-click="vm.add()" translate>ADD</md-button>';
+const selectBankList: string = '<non-data-grid source="$resolve.source" provider="vm"> </non-data-grid>';
 
 export class UiRouterConfig {
 
@@ -74,7 +74,7 @@ export class UiRouterConfig {
                     'content@app': {
                         template: selectBankList,
                         resolve: {
-                            listBankConfiguration: this.getListBankConfiguration
+                            source: this.getListBankSource
                         },
                         controller: 'BGACustomerSelectBankListController',
                         controllerAs: 'vm'
@@ -90,7 +90,7 @@ export class UiRouterConfig {
                     'content@app': {
                         template: profileList,
                         resolve: {
-                            listConfiguration: this.getListConfiguration
+                            source: this.getListSource
                         },
                         controller: 'BGACustomerProfileListController',
                         controllerAs: 'vm'
@@ -102,15 +102,20 @@ export class UiRouterConfig {
             });
     }
 
-    private getListConfiguration = (BGACustomerProfileService: any, $stateParams: ng.ui.IStateParamsService): any => {
+    private getListBankSource = (
+        BGACustomerProfileService: any,
+        DataGridService: IDataGridService): any => {
         'ngInject';
 
-        return BGACustomerProfileService.listCustomers($stateParams['orgId']);
+        return DataGridService.getDataSourceObject(BGACustomerProfileService.getListBanksUrl());
     };
 
-    private getListBankConfiguration = (BGACustomerProfileService: any): any => {
+    private getListSource = (
+        BGACustomerProfileService: any,
+        DataGridService: IDataGridService,
+        $stateParams: ng.ui.IStateParamsService): any => {
         'ngInject';
 
-        return BGACustomerProfileService.listBanks();
+        return DataGridService.getDataSourceObject(BGACustomerProfileService.getListCustomersUrl($stateParams['orgId']));
     };
 }

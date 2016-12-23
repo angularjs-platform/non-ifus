@@ -10,15 +10,15 @@ export class BGACustomerUserProfileService extends EntityManagementService {
         super($http);
     }
 
-    public listBanks = (): ng.IPromise<any> => {
-        return this.$http.get(this.baseUrl + '/selectbank').then(this.getCompleteHandler);
+    public getListBanksUrl = (): string => {
+        return this.baseUrl + '/selectbank';
     };
 
-    public listCustomers = (orgId: Number): ng.IPromise<any> => {
-        return this.$http.get(this.baseUrl + '/selectcustomer/' + orgId).then(this.getCompleteHandler);
+    public getListCustomersUrl = (orgId: Number): string => {
+        return this.baseUrl + '/selectcustomer/' + orgId;
     };
 
-    public listUsers = (orgId: Number): ng.IPromise<any> => {
-        return this.$http.get(this.baseUrl + '/list/' + orgId).then(this.getCompleteHandler);
+    public getListUsersUrl = (orgId: Number): string => {
+        return this.baseUrl + '/list/' + orgId;
     };
 }

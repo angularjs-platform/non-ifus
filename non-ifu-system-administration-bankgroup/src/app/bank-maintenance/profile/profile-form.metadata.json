@@ -105,11 +105,11 @@
             "label": "BASE_CURRENCY",
             "required": true,
             "mapping": {
-                "isocode": "orgVO.baseCurCode",
+                "orgName": "orgVO.baseCurCode",
                 "name": "orgVO.bankVO.isoCode"
             },
             "type": "LOAD_ALWAYS",
-            "dataSource": "getCurrentyOptions"
+            "dataSource": "getCurrencyOptions"
         },
         "expressionProperties": {
             "templateOptions.label": "'BASE_CURRENCY'|translate"

@@ -7,6 +7,7 @@ function sendSuccess(req, res, next) {
 function getUsers(req, res, next) {
     res.json({
         "title" : "LISTOFUSERS",
+        "totalItems": "4",
         "columnDefs" : [
             {
                 "name" : "orgName",
@@ -221,7 +222,7 @@ function fetchUser(req, res, next) {
 
 var apiEndPoints = [
     {
-        method: 'GET',
+        method: 'POST',
         url: '/organization/ba/bank/user/list',
         callback: getUsers
     },

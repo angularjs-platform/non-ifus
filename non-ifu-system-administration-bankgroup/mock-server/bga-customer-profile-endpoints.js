@@ -22,6 +22,7 @@ function validateUnique(req, res, next) {
 function selectBank(req, res, next) {
     res.json({
         "title" : "LISTOFBANKS",
+        "totalItems": "3",
         "gridType": "selectable",
         "selectAction": "listCustomers",
         "columnDefs" : [
@@ -71,6 +72,7 @@ function selectBank(req, res, next) {
 function getCustomers(req, res, next) {
     res.json({
         "title" : "LIST OF CUSTOMERS",
+        "totalItems": "3",
         "columnDefs" : [
             {
                 "name" : "orgName",
@@ -294,12 +296,12 @@ function fetchCustomer(req, res, next) {
 
 var apiEndPoints = [
     {
-        method: 'GET',
+        method: 'POST',
         url: '/organization/bga/customer/selectbank',
         callback: selectBank
     },
     {
-        method: 'GET',
+        method: 'POST',
         url: '/organization/bga/customer/list/:id',
         callback: getCustomers
     },
