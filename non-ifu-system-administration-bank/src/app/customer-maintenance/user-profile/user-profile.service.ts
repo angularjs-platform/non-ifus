@@ -10,11 +10,11 @@ export class BACustomerUserProfileService extends EntityManagementService {
         super($http);
     }
 
-    public listCustomers = (): ng.IPromise<any> => {
-        return this.$http.get(this.baseUrl + '/selectcustomer').then(this.getCompleteHandler);
+    public getListCustomersUrl = (): string => {
+        return this.baseUrl + '/selectcustomer';
     };
 
-    public listUsers = (orgId: Number): ng.IPromise<any> => {
-        return this.$http.get(this.baseUrl + '/list/' + orgId).then(this.getCompleteHandler);
+    public getListUsersUrl = (orgId: Number): string => {
+        return this.baseUrl + '/list/' + orgId;
     };
 }

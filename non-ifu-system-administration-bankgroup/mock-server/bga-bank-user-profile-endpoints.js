@@ -8,6 +8,7 @@ function selectBank(req, res, next) {
     res.json({
         "title" : "LISTOFBANKS",
         "gridType": "selectable",
+        "totalItems": "3",
         "selectAction": "listUsers",
         "columnDefs" : [
             {
@@ -56,6 +57,7 @@ function selectBank(req, res, next) {
 function getUsers(req, res, next) {
     res.json({
         "title" : "LIST OF USERS",
+        "totalItems": "3",
         "columnDefs" : [
             {
                 "name" : "orgName",
@@ -265,12 +267,12 @@ function fetchUser(req, res, next) {
 
 var apiEndPoints = [
     {
-        method: 'GET',
+        method: 'POST',
         url: '/organization/bga/bank/user/selectbank',
         callback: selectBank
     },
     {
-        method: 'GET',
+        method: 'POST',
         url: '/organization/bga/bank/user/list/:id',
         callback: getUsers
     },

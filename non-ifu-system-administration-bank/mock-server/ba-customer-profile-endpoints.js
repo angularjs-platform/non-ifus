@@ -22,6 +22,7 @@ function validateUnique(req, res, next) {
 function getCustomers(req, res, next) {
     res.json({
         "title" : "LIST OF CUSTOMERS",
+        "totalItems": "3",
         "columnDefs" : [
             {
                 "name" : "orgName",
@@ -245,7 +246,7 @@ function fetchCustomer(req, res, next) {
 
 var apiEndPoints = [
     {
-        method: 'GET',
+        method: 'POST',
         url: '/organization/ba/customer/list',
         callback: getCustomers
     },
