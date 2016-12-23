@@ -7,6 +7,7 @@ function sendSuccess(req, res, next) {
 function getUsers(req, res, next) {
     res.json({
         "title" : "LIST OF USERS",
+        "totalItems": "3",
         "columnDefs" : [
             {
                 "name" : "orgName",
@@ -228,7 +229,7 @@ function fetchUser(req, res, next) {
 
 var apiEndPoints = [
     {
-        method: 'GET',
+        method: 'POST',
         url: '/organization/ca/customer/user/list',
         callback: getUsers
     },

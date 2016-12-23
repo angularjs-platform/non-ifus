@@ -1,8 +1,8 @@
-import {IStateProvider, IFormDisplayState} from '@norn/non-framework';
+import {IStateProvider, IFormDisplayState, IDataGridService} from '@norn/non-framework';
 import {IEntityManagementService} from '@norn/non-shared-system-administration';
 
 const profileTpl: string = '<non-page-content-wrapper layout="column" title="BANK_PROFILE_MAINTENANCE"><non-form configuration="vm.formConfiguration"></non-form></non-page-content-wrapper>';
-const profileList: string = '<non-data-grid options="$resolve.listConfiguration" provider="vm"> </non-data-grid>';
+const profileList: string = '<non-data-grid source="$resolve.source" provider="vm"> </non-data-grid>';
 
 export class UiRouterConfig {
 
@@ -74,7 +74,7 @@ export class UiRouterConfig {
                     'content@app': {
                         template: profileList,
                         resolve: {
-                            listConfiguration: this.getListConfiguration
+                            source: this.getListSource
                         },
                         controller: 'BGABankProfileListController',
                         controllerAs: 'vm'
@@ -86,9 +86,11 @@ export class UiRouterConfig {
             });
     }
 
-    private getListConfiguration = (BGABankProfileService: IEntityManagementService): any => {
+    private getListSource = (
+        BGABankProfileService: IEntityManagementService,
+        DataGridService: IDataGridService ): any => {
         'ngInject';
 
-        return BGABankProfileService.list();
+        return DataGridService.getDataSourceObject(BGABankProfileService.getListUrl());
     };
 }

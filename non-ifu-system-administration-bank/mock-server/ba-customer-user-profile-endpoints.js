@@ -7,6 +7,7 @@ function sendSuccess(req, res, next) {
 function selectCustomer(req, res, next) {
     res.json({
         "title" : "LIST OF CUSTOMERS",
+        "totalItems": "3",
         "gridType": "selectable",
         "selectAction": "listUsers",
         "columnDefs" : [
@@ -56,6 +57,7 @@ function selectCustomer(req, res, next) {
 function getUsers(req, res, next) {
     res.json({
         "title" : "LIST OF USERS",
+        "totalItems": "3",
         "columnDefs" : [
             {
                 "name" : "orgName",
@@ -277,12 +279,12 @@ function fetchUser(req, res, next) {
 
 var apiEndPoints = [
     {
-        method: 'GET',
+        method: 'POST',
         url: '/organization/ba/customer/user/selectcustomer',
         callback: selectCustomer
     },
     {
-        method: 'GET',
+        method: 'POST',
         url: '/organization/ba/customer/user/list/:id',
         callback: getUsers
     },

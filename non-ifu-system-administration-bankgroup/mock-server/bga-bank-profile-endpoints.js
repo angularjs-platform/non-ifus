@@ -22,6 +22,7 @@ function validateUnique(req, res, next) {
 function getBanks(req, res, next) {
     res.json({
         "title" : "LISTOFBANKS",
+        "totalItems": 3,
         "columnDefs" : [
             {
                 "name" : "orgName",
@@ -249,7 +250,7 @@ function fetchBank(req, res, next) {
 
 var apiEndPoints = [
     {
-        method: 'GET',
+        method: 'POST',
         url: '/organization/bga/bank/list',
         callback: getBanks
     },
