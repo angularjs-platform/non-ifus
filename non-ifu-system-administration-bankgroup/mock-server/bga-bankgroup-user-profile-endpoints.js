@@ -72,6 +72,17 @@ function getUsers(req, res, next) {
                 "name" : "Test USER1",
                 "id" : 1052
             }
+        ],
+        "searchOptions": [
+            {
+                "key": "orgName",
+                "type": "input",
+                "className": "flex-gt-sm-70 flex-sm-50 flex-xs",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "ORGNAME"
+                }
+            }
         ]
     });
 }

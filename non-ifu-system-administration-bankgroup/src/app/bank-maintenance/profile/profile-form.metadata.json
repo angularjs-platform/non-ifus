@@ -103,7 +103,7 @@
         "type": "lookup",
         "templateOptions": {
             "label": "BASE_CURRENCY",
-            "required": true,
+            "required": false,
             "mapping": {
                 "orgName": "orgVO.baseCurCode",
                 "name": "orgVO.bankVO.isoCode"
