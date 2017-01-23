@@ -94,7 +94,8 @@
                 },
                 "expressionProperties": {
                     "templateOptions.label": "'DOM'|translate"
-                }
+                },
+                "hideExpression": "!formState.configObject.hasConfig('ADDRESS_HAS_DOM')"
             }
         ]
     },
