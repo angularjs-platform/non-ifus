@@ -199,6 +199,16 @@ function fetchCustomer(req, res, next) {
             "status":"A",
             "orgType": "CUSTOMER"
         },
+        "customerAccounts": [
+            {
+                "nickname": "Acct 1",
+                "number": "123456"
+            },
+            {
+                "nickname": "Acct 2",
+                "number": "123478"
+            }
+        ],
         "assignedCustomerRoleVOList": [
             {
                 "id": 41,
