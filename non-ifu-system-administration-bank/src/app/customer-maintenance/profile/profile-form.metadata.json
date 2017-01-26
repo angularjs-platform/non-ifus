@@ -297,6 +297,60 @@
         }
     },
     {
+        "key": "customerAccounts",
+        "type": "gridmultipleitems",
+        "templateOptions": {
+            "label": "ACCOUNTS",
+            "gridConfig": {
+                "columnDefs" : [
+                    {
+                        "name" : "nickname",
+                        "labelKey" : "NICKNAME",
+                        "visible" : true,
+                        "type" : null,
+                        "options" : null
+                    },
+                    {
+                        "name" : "number",
+                        "labelKey" : "ACCTNUMBER",
+                        "visible" : true,
+                        "type" : null,
+                        "options" : null
+                    }
+                ]
+            },
+            "formConfig": [
+                {
+                    "key": "nickname",
+                    "type": "input",
+                    "templateOptions": {
+                        "type": "text",
+                        "label": "NICKNAME",
+                        "required": true
+                    },
+                    "expressionProperties": {
+                        "templateOptions.label": "'NICKNAME'|translate"
+                    }
+                },
+                {
+                    "key": "number",
+                    "type": "input",
+                    "templateOptions": {
+                        "type": "text",
+                        "label": "ACCTNUMBER",
+                        "required": true
+                    },
+                    "expressionProperties": {
+                        "templateOptions.label": "'ACCTNUMBER'|translate"
+                    }
+                }
+            ]
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'ACCOUNTS'|translate"
+        }
+    },
+    {
         "key": "assignedCustomerRoleVOList",
         "type": "multiselect",
         "templateOptions": {
