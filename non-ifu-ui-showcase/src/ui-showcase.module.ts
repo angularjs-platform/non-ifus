@@ -1,3 +1,5 @@
+import * as angular from 'angular';
+
 const moduleName: string = 'non.ifu.ui-showcase';
 
 import app from './app/app.module';
