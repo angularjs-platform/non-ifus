@@ -1,3 +1,5 @@
+import * as angular from 'angular';
+
 const moduleName: string = 'non.ifu.home.app';
 
 import dashboard from './dashboard/dashboard.module';

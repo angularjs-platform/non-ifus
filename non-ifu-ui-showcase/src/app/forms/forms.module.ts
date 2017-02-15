@@ -1,3 +1,5 @@
+import * as angular from 'angular';
+
 const moduleName: string = 'non.ifu.ui-showcase.app.forms';
 
 // Bundle - config
