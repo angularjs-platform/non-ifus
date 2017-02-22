@@ -1,3 +1,5 @@
+import * as angular from 'angular';
+
 const moduleName: string = 'non.ifu.system-administration-bank.app';
 
 // Config
