@@ -1,0 +1,13 @@
+[
+    {
+         "template": "<h2>UI Showcase Form Components - Attachments</h2>"
+    },
+    {
+        "key": "attachments",
+        "type": "multipleattachments",
+        "templateOptions": {
+            "label": "File attachments",
+            "maxItems": 2
+        }
+    }
+]

@@ -22,7 +22,8 @@ function getLocalization(req, res, next) {
             SWITCH_SHOWCASE: "Switch",
             TEXTAREA_SHOWCASE: "Textarea",
             VALIDATIONS_SHOWCASE: "Dynamic Validations",
-            LAYOUTS_SHOWCASE: "Responsive Layouts"
+            LAYOUTS_SHOWCASE: "Responsive Layouts",
+            ATTACHMENTS_SHOWCASE: "Multiple Attachments"
         });
 }
 

@@ -73,6 +73,11 @@ export class UiRouterConfig {
                             'id': 'menu-forms-components-switch',
                             'title': 'Switch',
                             'url': '/ui-showcase/forms/components/switch'
+                        },
+                        {
+                            'id': 'menu-forms-components-attachments',
+                            'title': 'Attachments',
+                            'url': '/ui-showcase/forms/components/attachments'
                         }
                     ]
                 };
