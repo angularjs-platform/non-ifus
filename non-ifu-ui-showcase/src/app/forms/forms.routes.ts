@@ -144,6 +144,20 @@ export class UiRouterConfig {
                     label: 'LAYOUTS_SHOWCASE',
                     parent: 'app.ui-showcase.forms'
                 }
+            })
+            .state('app.ui-showcase.forms-attachments', {
+                url: '/ui-showcase/forms/components/attachments',
+                views   : {
+                    'content@app': {
+                        template: require('./components/attachments/attachments.tpl'),
+                        controller: 'AttachmentComponentsController',
+                        controllerAs: 'vm'
+                    }
+                },
+                ncyBreadcrumb: {
+                    label: 'ATTACHMENTS_SHOWCASE',
+                    parent: 'app.ui-showcase.forms'
+                }
             });
     }
 }

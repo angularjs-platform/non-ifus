@@ -16,6 +16,7 @@ import {SelectComponentsController} from './components/select/select.controller'
 import {DatepickerComponentsController} from './components/datepicker/datepicker.controller';
 import {SwitchComponentsController} from './components/switch/switch.controller';
 import {TextareaComponentsController} from './components/textarea/textarea.controller';
+import {AttachmentComponentsController} from './components/attachments/attachments.controller';
 
 angular.module(moduleName, [])
     .controller('InputComponentsController', InputComponentsController)
@@ -27,6 +28,7 @@ angular.module(moduleName, [])
     .controller('TextareaComponentsController', TextareaComponentsController)
     .controller('DynamicValidationsController', DynamicValidationsController)
     .controller('LayoutsController', LayoutsController)
+    .controller('AttachmentComponentsController', AttachmentComponentsController)
     .config(UiRouterConfig);
 
 export default moduleName;
