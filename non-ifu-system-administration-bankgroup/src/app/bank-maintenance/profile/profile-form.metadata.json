@@ -27,8 +27,8 @@
                 },
                 "validation": {
                     "messages": {
-                        "pattern": "'REGEX_ALPHA_MESSAGE'|translate",
-                        "validatorUnique": "'ERROR_MESSAGE_UNIQUE' | translate: { label: this.to.label }"
+                        "pattern": "'FORM.REGEX_ALPHA_MESSAGE'|translate",
+                        "validatorUnique": "'FORM.ERROR_MESSAGE_UNIQUE' | translate: { label: this.to.label }"
                     }
                 },
                 "modelOptions": {
