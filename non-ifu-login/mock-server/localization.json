@@ -1,9 +1,13 @@
 {
-    "ORGANIZATION_ID": "Organization ID",
-    "USER_ID": "User ID",
-    "PASSWORD": "Password",
-    "LOGIN": "Login",
-    "FIELD_REQUIRED": "Value Is Required!",
-    "FIELD_MAX_LENGTH_EXCEEDED": "Maximum Length Exceeded!",
-    "CORRECT_FORM_INPUT_ERRORS": "Please correct the Form!"
+    "FORM": {
+        "CORRECT_FORM_INPUT_ERRORS": "Please correct the Form!",
+        "FIELD_MAX_LENGTH_EXCEEDED": "Maximum Length Exceeded!",
+        "FIELD_REQUIRED": "Value Is Required!"
+    },
+    "LOGIN" : {
+        "LOGIN": "Login",
+        "ORGANIZATION_ID": "Organization ID",
+        "PASSWORD": "Password",
+        "USER_ID": "User ID"
+    }
 }
