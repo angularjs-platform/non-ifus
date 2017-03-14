@@ -9,7 +9,12 @@ function selectCustomer(req, res, next) {
         "title" : "LIST OF CUSTOMERS",
         "totalItems": "3",
         "gridType": "selectable",
-        "selectAction": "listUsers",
+        "selectConfig": {
+            "param": "orgId",
+            "value": "id",
+            "dynamic": "true",
+            "configName": "tnxType"
+        },
         "columnDefs" : [
             {
                 "name" : "orgName",

@@ -1,8 +1,8 @@
-import {IStateProvider, IFormDisplayState, IDataGridService} from '@norn/non-framework';
+import {IStateProvider, IFormDisplayState, IDataGridService, GridOptions} from '@norn/non-framework';
 
 const userProfileTpl: string = '<non-page-content-wrapper layout="column" title="USER_PROFILE_MAINTENANCE"><non-form configuration="vm.formConfiguration"></non-form></non-page-content-wrapper>';
 const userProfileList: string = '<non-data-grid source="$resolve.source" provider="vm"> </non-data-grid><md-button class="md-primary md-raised md-ink-ripple" ng-click="vm.add()" translate>ADD</md-button>';
-const selectCustomerList: string = '<non-data-grid source="$resolve.source" provider="vm"> </non-data-grid>';
+const selectCustomerList: string = '<non-data-grid source="$resolve.source"> </non-data-grid>';
 
 export class UiRouterConfig {
 
@@ -75,9 +75,7 @@ export class UiRouterConfig {
                         template: selectCustomerList,
                         resolve: {
                             source: this.getListCustomerSource
-                        },
-                        controller: 'BACustomerUserSelectCustomerListController',
-                        controllerAs: 'vm'
+                        }
                     }
                 },
                 ncyBreadcrumb: {
@@ -113,9 +111,14 @@ export class UiRouterConfig {
 
     private getListCustomerSource = (
         BACustomerUserProfileService: any,
-        DataGridService: IDataGridService): any => {
+        DataGridService: IDataGridService,
+        $stateParams: ng.ui.IStateParamsService): any => {
         'ngInject';
 
-        return DataGridService.getDataSourceObject(BACustomerUserProfileService.getListCustomersUrl());
+        let additionalOptions: GridOptions = {};
+        additionalOptions.configData = {
+            tnxType: 'app.ba.customer-maintenance.user-profile.list'
+        };
+        return DataGridService.getDataSourceObject(BACustomerUserProfileService.getListCustomersUrl(), additionalOptions    );
     };
 }
