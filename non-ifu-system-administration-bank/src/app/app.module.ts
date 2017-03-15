@@ -6,10 +6,12 @@ const moduleName: string = 'non.ifu.system-administration-bank.app';
 import {UiRouterConfig} from './app.routes';
 
 // Internal modules
-import bankMaintenance from './bank-maintenance/bank-maintenance.module';
+import userMaintenance from './user-maintenance/user-maintenance.module';
+import roleMaintenance from './role-maintenance/role-maintenance.module';
+import authorizationMaintenance from './authorization-maintenance/authorization-maintenance.module';
 import customerMaintenance from './customer-maintenance/customer-maintenance.module';
 
-angular.module(moduleName, [bankMaintenance, customerMaintenance])
+angular.module(moduleName, [userMaintenance, roleMaintenance, authorizationMaintenance, customerMaintenance])
     .config(UiRouterConfig);
 
 export default moduleName;
