@@ -2,7 +2,7 @@ import {IStateProvider, IFormDisplayState, IDataGridService} from '@norn/non-fra
 import {IEntityManagementService} from '@norn/non-shared-system-administration';
 
 const userProfileTpl: string = '<non-page-content-wrapper layout="column" title="USER_PROFILE_MAINTENANCE"><non-form configuration="vm.formConfiguration"></non-form></non-page-content-wrapper>';
-const userProfileList: string = '<non-data-grid source="$resolve.source" provider="vm"> </non-data-grid>';
+const userProfileList: string = '<non-data-grid source="$resolve.source"> </non-data-grid>';
 
 export class UiRouterConfig {
 
@@ -75,9 +75,7 @@ export class UiRouterConfig {
                         template: userProfileList,
                         resolve: {
                             source: this.getListSource
-                        },
-                        controller: 'BABankUserProfileListController',
-                        controllerAs: 'vm'
+                        }
                     }
                 },
                 ncyBreadcrumb: {

@@ -38,19 +38,32 @@ function getUsers(req, res, next) {
                 "options" :
                 [
                     {
-                        "action" : "view",
                         "buttonLabel" : "VIEW",
-                        "type" : "view"
+                        "type" : "view",
+                        "stateConfig": {
+                            "state": "app.ba.bank-maintenance.user-profile.view",
+                            "param": "userId",
+                            "value": "id"
+                        }
                     },
                     {
-                        "action" : "edit",
                         "buttonLabel" : "EDIT",
-                        "type" : "edit"
+                        "type" : "edit",
+                        "stateConfig": {
+                            "state": "app.ba.bank-maintenance.user-profile.update",
+                            "param": "userId",
+                            "value": "id"
+                        }
                     },
                     {
-                        "action" : "delete",
                         "buttonLabel" : "DELETE",
-                        "type" : "delete"
+                        "type" : "delete",
+                        "serviceConfig": {
+                            "name": "BABankUserProfileService",
+                            "method": "delete",
+                            "value": "id",
+                            "successLabel": "DELETE"
+                        }
                     }
                 ]
             }
