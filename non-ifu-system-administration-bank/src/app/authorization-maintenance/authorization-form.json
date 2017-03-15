@@ -1,0 +1,12 @@
+[
+    {
+        "key": "domainObject.name",
+        "type": "input",
+        "className": "flex",
+        "templateOptions": {
+            "type": "text",
+            "label": "NAME",
+            "required": true
+        }
+    }
+]

@@ -9,7 +9,7 @@ export class UiRouterConfig {
 
         $stateProvider
             .state('app.bga.customer-maintenance', {
-                url: '/bga/customer',
+                url: '/org/bga/customer',
                 onEnter: this.loadSecondaryMenu,
                 views: {
                     'content@app': {
@@ -17,7 +17,7 @@ export class UiRouterConfig {
                     }
                 },
                 ncyBreadcrumb: {
-                    label: 'CUSTOMER_MAINTENANCE'
+                    label: 'BREADCRUMB.CUSTOMER_MAINTENANCE'
                 }
             });
     }

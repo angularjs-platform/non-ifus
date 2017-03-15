@@ -11,7 +11,7 @@ export class UiRouterConfig {
             .state('app.bga', {
                 abstract: true,
                 ncyBreadcrumb: {
-                    label: 'BG_SYSTEM_ADMINISTRATION'
+                    label: 'BREADCRUMB.BG_SYSTEM_ADMINISTRATION'
                 }
             });
     }

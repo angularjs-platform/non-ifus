@@ -9,7 +9,7 @@ export class UiRouterConfig {
 
         $stateProvider
             .state('app.bga.bank-maintenance', {
-                url: '/bga/bank',
+                url: '/org/bga/bank',
                 onEnter: this.loadSecondaryMenu,
                 views: {
                     'content@app': {
@@ -17,7 +17,7 @@ export class UiRouterConfig {
                     }
                 },
                 ncyBreadcrumb: {
-                    label: 'BANK_MAINTENANCE'
+                    label: 'BREADCRUMB.BANK_MAINTENANCE'
                 }
             });
     }
