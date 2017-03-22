@@ -197,28 +197,28 @@ function inprepList(req, res, next) {
         "columnDefs" : [
             {
                 "name" : "productCode",
-                "labelKey" : "PRODUCT_CODE",
+                "displayName" : "PRODUCT_CODE",
                 "visible" : true,
                 "type" : null,
                 "options" : null
             },
             {
                 "name" : "amount",
-                "labelKey" : "AMOUNT",
+                "displayName" : "AMOUNT",
                 "visible" : true,
                 "type" : null,
                 "options" : null
             },
             {
                 "name" : "id",
-                "labelKey" : null,
+                "displayName" : null,
                 "visible" : false,
                 "type" : null,
                 "options" : null
             },
             {
                 "name" : "Actions",
-                "labelKey" : "ACTIONS",
+                "displayName" : "ACTIONS",
                 "visible" : true,
                 "type" : "button",
                 "options" :
@@ -280,21 +280,21 @@ function pendingList(req, res, next) {
         "columnDefs" : [
             {
                 "name" : "productCode",
-                "labelKey" : "PRODUCT_CODE",
+                "displayName" : "PRODUCT_CODE",
                 "visible" : true,
                 "type" : null,
                 "options" : null
             },
             {
                 "name" : "amount",
-                "labelKey" : "AMOUNT",
+                "displayName" : "AMOUNT",
                 "visible" : true,
                 "type" : null,
                 "options" : null
             },
             {
                 "name" : "Actions",
-                "labelKey" : "ACTIONS",
+                "displayName" : "ACTIONS",
                 "visible" : true,
                 "type" : "button",
                 "options" :
@@ -356,28 +356,28 @@ function masterList(req, res, next) {
         "columnDefs" : [
             {
                 "name" : "productCode",
-                "labelKey" : "PRODUCT_CODE",
+                "displayName" : "PRODUCT_CODE",
                 "visible" : true,
                 "type" : null,
                 "options" : null
             },
             {
                 "name" : "amount",
-                "labelKey" : "AMOUNT",
+                "displayName" : "AMOUNT",
                 "visible" : true,
                 "type" : null,
                 "options" : null
             },
             {
                 "name" : "id",
-                "labelKey" : null,
+                "displayName" : null,
                 "visible" : false,
                 "type" : null,
                 "options" : null
             },
             {
                 "name" : "Actions",
-                "labelKey" : "ACTIONS",
+                "displayName" : "ACTIONS",
                 "visible" : true,
                 "type" : "button",
                 "options" :
