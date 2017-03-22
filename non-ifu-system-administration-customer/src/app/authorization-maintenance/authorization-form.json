@@ -1,12 +1,67 @@
 [
     {
-        "key": "domainObject.name",
+        "key": "authMatrixVO.productCode",
+        "type": "select",
+        "className": "flex-gt-sm-30",
+        "templateOptions": {
+            "type": "text",
+            "label": "PRODUCT_CODE",
+            "required": true
+        },
+        "hideExpression": "!formState.viewManager.isFieldVisible('productCode')",
+        "expressionProperties": {
+            "templateOptions.options": "formState.viewManager.getFieldValues('productCode')",
+            "templateOptions.onChange": "formState.viewManager.getFlexiFormConfig()"
+        }
+    },
+    {
+        "key": "authMatrixVO.subProductCode",
+        "type": "select",
+        "className": "flex-gt-sm-30",
+        "templateOptions": {
+            "type": "text",
+            "label": "SUB_PRODUCT_CODE",
+            "required": true
+        },
+        "hideExpression": "!formState.viewManager.isFieldVisible('subProductCode')",
+        "expressionProperties": {
+            "templateOptions.options": "formState.viewManager.getFieldValues('subProductCode')"
+        }
+    },
+    {
+        "key": "authMatrixVO.tnxTypeCode",
+        "type": "select",
+        "className": "flex-gt-sm-30",
+        "templateOptions": {
+            "type": "text",
+            "label": "TNX_TYPE_CODE",
+            "required": true
+        },
+        "hideExpression": "!formState.viewManager.isFieldVisible('tnxTypeCode')",
+        "expressionProperties": {
+            "templateOptions.options": "formState.viewManager.getFieldValues('tnxTypeCode')"
+        }
+    },
+    {
+        "key": "authMatrixVO.amount",
         "type": "input",
         "className": "flex",
         "templateOptions": {
             "type": "text",
-            "label": "NAME",
+            "label": "AMOUNT",
             "required": true
-        }
+        },
+        "hideExpression": "!formState.viewManager.isFieldVisible('amount')"
+    },
+    {
+        "key": "authMatrixVO.account",
+        "type": "input",
+        "className": "flex",
+        "templateOptions": {
+            "type": "text",
+            "label": "ACCOUNT",
+            "required": true
+        },
+        "hideExpression": "!formState.viewManager.isFieldVisible('account')"
     }
 ]
