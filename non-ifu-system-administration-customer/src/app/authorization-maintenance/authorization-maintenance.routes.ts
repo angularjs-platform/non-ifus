@@ -8,7 +8,7 @@ const abstractStateURL: string = null;
 const abstractStateBreadCrumbLabel: string = null;
 const formController: string = 'CACustomerAuthorizationFormController';
 const enableCreate: boolean = true;
-const formTemplate: string = '<non-page-content-wrapper layout="column" title="HEADER.AUTHORIZATION_MAINTENANCE" flex><non-form configuration="vm.formConfiguration"></non-form></non-page-content-wrapper>';
+const formTemplate: string = '<non-page-content-wrapper layout="column" title="HEADER.AUTHORIZATION_MAINTENANCE" flex><non-flexi-form configuration="vm.formConfiguration" domain-object="authMatrixVO"></non-flexi-form></non-page-content-wrapper>';
 const listTemplate: string = '<non-data-grid source="$resolve.source" title="HEADER.AUTHORIZATION_MAINTENANCE" layout="column" flex></non-data-grid>';
 
 export class UiRouterConfig {
