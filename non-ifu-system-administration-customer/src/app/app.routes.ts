@@ -11,7 +11,7 @@ export class UiRouterConfig {
             .state('app.ca', {
                 abstract: true,
                 ncyBreadcrumb: {
-                    label: 'CA_SYSTEM_ADMINISTRATION'
+                    label: 'BREADCRUMB.CA_SYSTEM_ADMINISTRATION'
                 }
             });
     }

@@ -11,7 +11,7 @@ export class UiRouterConfig {
             .state('app.ba', {
                 abstract: true,
                 ncyBreadcrumb: {
-                    label: 'BA_SYSTEM_ADMINISTRATION'
+                    label: 'BREADCRUMB.BA_SYSTEM_ADMINISTRATION'
                 }
             });
     }
