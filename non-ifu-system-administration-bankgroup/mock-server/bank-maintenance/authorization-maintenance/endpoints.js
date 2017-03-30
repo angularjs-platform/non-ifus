@@ -125,6 +125,22 @@ function inprepList(req, res, next) {
                 ]
             }
         ],
+        "searchOptions": [
+            {
+                "key": "bankName",
+                "className": "flex-gt-sm-70 flex-sm-50 flex-xs",
+                "type": "lookup",
+                "templateOptions": {
+                    "label": "BANK",
+                    "required": true,
+                    "mapping": {
+                        "name": "bankName"
+                    },
+                    "type": "LOAD_ALWAYS",
+                    "dataSource": "/org/bga/bank/master/list"
+                }
+            }
+        ],
         "data" :
         [
             {
