@@ -110,7 +110,7 @@ function inprepList(req, res, next) {
                         "stateConfig": {
                             "state": baseState + ".inprep.history-edit",
                             "param": "historyId",
-                            "value": "id"
+                            "field": "id"
                         }
                     },
                     {
@@ -119,7 +119,7 @@ function inprepList(req, res, next) {
                         "stateConfig": {
                             "state": baseState + ".inprep.history-view",
                             "param": "historyId",
-                            "value": "id"
+                            "field": "id"
                         }
                     }
                 ]
@@ -162,6 +162,17 @@ function inprepList(req, res, next) {
 function pendingList(req, res, next) {
     res.json({
         "totalItems": "3",
+        "gridType": "multiSelect",
+        "footerButtons": [
+            {
+                "buttonLabel" : "BUTTON.APPROVE",
+                "multiSelectConfig": {
+                    "url": "/org/bga/bank/authorization/approve",
+                    "field": "id",
+                    "successLabel": "APPROVED_SUCCESS"
+                }
+            }
+        ],
         "columnDefs" : [
             {
                 "name" : "name",
@@ -190,7 +201,7 @@ function pendingList(req, res, next) {
                         "stateConfig": {
                             "state": baseState + ".pending.history-check",
                             "param": "historyId",
-                            "value": "id"
+                            "field": "id"
                         }
                     },
                     {
@@ -199,7 +210,7 @@ function pendingList(req, res, next) {
                         "stateConfig": {
                             "state": baseState + ".pending.history-view",
                             "param": "historyId",
-                            "value": "id"
+                            "field": "id"
                         }
                     }
                 ]
@@ -254,7 +265,7 @@ function masterList(req, res, next) {
                         "stateConfig": {
                             "state": baseState + ".master.edit",
                             "param": "id",
-                            "value": "id"
+                            "field": "id"
                         }
                     },
                     {
@@ -263,7 +274,7 @@ function masterList(req, res, next) {
                         "stateConfig": {
                             "state": baseState + ".master.view",
                             "param": "id",
-                            "value": "id"
+                            "field": "id"
                         }
                     }
                 ]
