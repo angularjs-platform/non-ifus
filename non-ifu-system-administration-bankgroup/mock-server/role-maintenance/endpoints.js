@@ -110,7 +110,7 @@ function inprepList(req, res, next) {
                         "stateConfig": {
                             "state": baseState + ".inprep.history-edit",
                             "param": "historyId",
-                            "value": "id"
+                            "field": "id"
                         }
                     },
                     {
@@ -119,7 +119,7 @@ function inprepList(req, res, next) {
                         "stateConfig": {
                             "state": baseState + ".inprep.history-view",
                             "param": "historyId",
-                            "value": "id"
+                            "field": "id"
                         }
                     }
                 ]
@@ -174,7 +174,7 @@ function pendingList(req, res, next) {
                         "stateConfig": {
                             "state": baseState + ".pending.history-check",
                             "param": "historyId",
-                            "value": "id"
+                            "field": "id"
                         }
                     },
                     {
@@ -183,7 +183,7 @@ function pendingList(req, res, next) {
                         "stateConfig": {
                             "state": baseState + ".pending.history-view",
                             "param": "historyId",
-                            "value": "id"
+                            "field": "id"
                         }
                     }
                 ]
@@ -238,7 +238,7 @@ function masterList(req, res, next) {
                         "stateConfig": {
                             "state": baseState + ".master.edit",
                             "param": "id",
-                            "value": "id"
+                            "field": "id"
                         }
                     },
                     {
@@ -247,7 +247,7 @@ function masterList(req, res, next) {
                         "stateConfig": {
                             "state": baseState + ".master.view",
                             "param": "id",
-                            "value": "id"
+                            "field": "id"
                         }
                     }
                 ]
