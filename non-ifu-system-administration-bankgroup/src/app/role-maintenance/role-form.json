@@ -1,6 +1,6 @@
 [
     {
-        "key": "domainObject.name",
+        "key": "rootVO.name",
         "type": "input",
         "className": "flex",
         "templateOptions": {

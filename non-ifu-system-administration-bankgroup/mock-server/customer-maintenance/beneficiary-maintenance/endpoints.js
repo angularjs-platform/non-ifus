@@ -9,7 +9,7 @@ function sendSuccess(req, res, next) {
 
 function create(req, res, next) {
     res.json({
-        "domainObject": {
+        "rootVO": {
             "id": null,
             "name": null
         },
@@ -19,7 +19,7 @@ function create(req, res, next) {
 
 function editHistory(req, res, next) {
     res.json({
-        "domainObject": {
+        "rootVO": {
             "id": 5,
             "name": "John"
         },
@@ -30,7 +30,7 @@ function editHistory(req, res, next) {
 function viewHistory(req, res, next) {
     if (Number(req.params.id) > 3000) {
         res.json({
-            "domainObject": {
+            "rootVO": {
                 "id": 5,
                 "name": "John"
             },
@@ -40,7 +40,7 @@ function viewHistory(req, res, next) {
     }
     else {
         res.json({
-            "domainObject": {
+            "rootVO": {
                 "id": 5,
                 "name": "John"
             },
@@ -51,7 +51,7 @@ function viewHistory(req, res, next) {
 
 function check(req, res, next) {
     res.json({
-        "domainObject": {
+        "rootVO": {
             "id": 3,
             "name": "Rambo"
         },
@@ -61,7 +61,7 @@ function check(req, res, next) {
 
 function edit(req, res, next) {
     res.json({
-        "domainObject": {
+        "rootVO": {
             "id": 3,
             "name": "Sarah"
         },
@@ -71,7 +71,7 @@ function edit(req, res, next) {
 
 function view(req, res, next) {
     res.json({
-        "domainObject": {
+        "rootVO": {
             "id": 3,
             "name": "Sarah"
         },

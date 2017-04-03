@@ -1,12 +1,322 @@
 [
+     {
+        "elementAttributes": {
+          "layout-gt-sm": "row",
+          "layout-sm": "row",
+          "layout-xs": "column"
+        },
+        "fieldGroup": [
+            {
+                "key": "rootVO.orgName",
+                "type": "input",
+                "className": "flex-gt-sm-70 flex-sm-50 flex-xs",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "BANK_ABBV_NAME",
+                    "required": true,
+                    "maxlength": 20,
+                    "onKeydown": "this.options.formControl.$invalid = false;",
+                    "pattern": "([a-zA-Z]+)"
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'BANK_ABBV_NAME'|translate",
+                    "templateOptions.readonly": "formState.displayState === 'update'"
+                },
+                "validation": {
+                    "messages": {
+                        "pattern": "'FORM.REGEX_ALPHA_MESSAGE'|translate"
+                    }
+                },
+                "modelOptions": {
+                    "updateOn": "change"
+                }
+            },
+            {
+                "key": "rootVO.name",
+                "type": "input",
+                "className": "flex-gt-sm-30 flex-sm-50 flex-xs",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "BANK_NAME",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'BANK_NAME'|translate"
+                }
+            }
+        ]
+    },
     {
-        "key": "domainObject.name",
+        "elementAttributes": {
+          "layout-gt-sm": "row",
+          "layout-sm": "column",
+          "layout-xs": "column"
+        },
+        "fieldGroup": [
+            {
+                "key": "rootVO.addressLine1",
+                "type": "input",
+                "className": "flex-gt-sm-40",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "ADDRESS_1",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'ADDRESS_1'|translate"
+                }
+            },
+            {
+                "key": "rootVO.addressLine2",
+                "type": "input",
+                "className": "flex-80 flex-gt-sm-40 flex-xs-100",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "ADDRESS_2",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'ADDRESS_2'|translate"
+                }
+            },
+            {
+                "key": "rootVO.dom",
+                "type": "input",
+                "className": "flex-gt-sm-20",
+                "templateOptions": {
+                    "type": "text",
+                    "label": "DOM",
+                    "required": true
+                },
+                "expressionProperties": {
+                    "templateOptions.label": "'DOM'|translate"
+                },
+                "hideExpression": "!formState.configObject.hasConfig('ADDRESS_HAS_DOM')"
+            }
+        ]
+    },
+    {
+        "key": "rootVO.baseCurCode",
+        "type": "lookup",
+        "templateOptions": {
+            "label": "BASE_CURRENCY",
+            "required": false,
+            "mapping": {
+                "orgName": "rootVO.baseCurCode",
+                "name": "rootVO.bankVO.isoCode"
+            },
+            "type": "LOAD_ALWAYS",
+            "dataSource": "getCurrencyDataSource"
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'BASE_CURRENCY'|translate"
+        }
+    },
+    {
+        "key": "rootVO.contactName",
         "type": "input",
-        "className": "flex",
         "templateOptions": {
             "type": "text",
-            "label": "NAME",
+            "label": "CONTACT_NAME",
             "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'CONTACT_NAME'|translate"
+        }
+    },
+    {
+        "key": "rootVO.country",
+        "type": "select",
+        "templateOptions": {
+            "type": "text",
+            "label": "COUNTRY",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'COUNTRY'|translate",
+            "templateOptions.options": "formState.viewManager.getCountryOptions(this)"
+        }
+    },
+    {
+        "key": "rootVO.email",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "EMAIL",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'EMAIL'|translate"
+        }
+    },
+    {
+        "key": "rootVO.fax",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "FAX",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'FAX'|translate"
+        }
+    },
+    {
+        "key": "rootVO.language",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "LANGUAGE",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'LANGUAGE'|translate"
+        }
+    },
+    {
+        "key": "rootVO.phone",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "PHONE",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'PHONE'|translate"
+        }
+    },
+    {
+        "key": "rootVO.reference",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "REFERENCE",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'REFERENCE'|translate"
+        }
+    },
+    {
+        "key": "rootVO.telex",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "TELEX",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'TELEX'|translate"
+        }
+    },
+    {
+        "key": "rootVO.webAddress",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "WEB_ADDRESS",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'WEB_ADDRESS'|translate"
+        }
+    },
+    {
+        "key": "rootVO.streetName",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "STREET_NAME",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'STREET_NAME'|translate"
+        }
+    },
+    {
+        "key": "rootVO.postCode",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "POSTAL_CODE",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'POSTAL_CODE'|translate"
+        }
+    },
+    {
+        "key": "rootVO.townName",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "TOWN_NAME",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'TOWN_NAME'|translate"
+        }
+    },
+    {
+        "key": "rootVO.countrySubDiv",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "COUNTRY_SUB_DIVISION",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'COUNTRY_SUB_DIVISION'|translate"
+        }
+    },
+    {
+        "key": "rootVO.status",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "STATUS",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'STATUS'|translate"
+        }
+    },
+    {
+        "key": "rootVO.bankVO.isoCode",
+        "type": "input",
+        "templateOptions": {
+            "type": "text",
+            "label": "ISO_CODE",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'ISO_CODE'|translate"
+        }
+    },
+    {
+        "key": "assignedBankRoleVOList",
+        "type": "multiselect",
+        "templateOptions": {
+            "type": "text",
+            "label": "BANK_ROLES",
+            "required": true,
+            "sourceList": "AVAILABLE_BANK_ROLES"
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'BANK_ROLES'|translate"
+        }
+    },
+    {
+        "key": "assignedCustomerRoleVOList",
+        "type": "multiselect",
+        "templateOptions": {
+            "type": "text",
+            "label": "CUSTOMER_ROLES",
+            "sourceList": "AVAILABLE_CUSTOMER_ROLES",
+            "required": true
+        },
+        "expressionProperties": {
+            "templateOptions.label": "'CUSTOMER_ROLES'|translate"
         }
     }
 ]
