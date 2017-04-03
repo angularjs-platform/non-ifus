@@ -1,5 +1,9 @@
-/* Add TPL specific SCSS. You can reuse the existing Variables, Mixins, Extends and Functions from Base or NgMaterial  */
-/*.non-dashboard-tpl {
+.non-dashboard-tpl {
+    .container {
+        padding: 0 5px 5px;
 
-
-}*/
+        md-tabs {
+            border: 1px solid $accent-300;
+        }
+    }
+}
